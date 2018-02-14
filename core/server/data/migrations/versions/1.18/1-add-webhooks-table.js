@@ -1,8 +1,8 @@
 'use strict';
 
 var Promise = require('bluebird'),
-    common = require('../../../../lib/common'),
-    commands = require('../../../schema').commands,
+    common = requireRoot('lib/common'),
+    commands = requireRoot('data/schema').commands,
     table = 'webhooks',
     message1 = 'Adding table: ' + table,
     message2 = 'Dropping table: ' + table;

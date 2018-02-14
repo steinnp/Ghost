@@ -12,6 +12,10 @@
  */
 require('./overrides');
 
+global.requireRoot = function(module) {
+    return require(`${__dirname}/${module}`);
+}
+
 // Module dependencies
 var debug = require('ghost-ignition').debug('boot:init'),
     config = require('./config'),
