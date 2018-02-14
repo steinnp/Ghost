@@ -3,7 +3,7 @@
 //
 // Overrides the standard behaviour of `{[title}}` to ensure the content is correctly escaped
 
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     SafeString = proxy.SafeString,
     escapeExpression = proxy.escapeExpression;
 

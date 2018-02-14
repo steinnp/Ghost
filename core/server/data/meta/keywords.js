@@ -1,6 +1,6 @@
 'use strict';
 
-const models = require('../../models');
+const models = requireRoot('models');
 
 function getKeywords(data) {
     if (data.post && data.post.tags && data.post.tags.length > 0) {

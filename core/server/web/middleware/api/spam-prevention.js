@@ -1,7 +1,7 @@
 var moment = require('moment'),
     _ = require('lodash'),
-    config = require('../../../config'),
-    common = require('../../../lib/common'),
+    config = requireRoot('config'),
+    common = requireRoot('lib/common'),
     spam = config.get('spam') || {},
     spamPrivateBlog = spam.private_blog || {},
     spamGlobalBlock = spam.global_block || {},
@@ -48,7 +48,7 @@ handleStoreError = function handleStoreError(err) {
 globalBlock = function globalBlock() {
     var ExpressBrute = require('express-brute'),
         BruteKnex = require('brute-knex'),
-        db = require('../../../data/db');
+        db = requireRoot('data/db');
 
     store = store || new BruteKnex({
         tablename: 'brute',
@@ -77,7 +77,7 @@ globalBlock = function globalBlock() {
 globalReset = function globalReset() {
     var ExpressBrute = require('express-brute'),
         BruteKnex = require('brute-knex'),
-        db = require('../../../data/db');
+        db = requireRoot('data/db');
 
     store = store || new BruteKnex({
         tablename: 'brute',
@@ -111,7 +111,7 @@ globalReset = function globalReset() {
 userLogin = function userLogin() {
     var ExpressBrute = require('express-brute'),
         BruteKnex = require('brute-knex'),
-        db = require('../../../data/db');
+        db = requireRoot('data/db');
 
     store = store || new BruteKnex({
         tablename: 'brute',
@@ -143,7 +143,7 @@ userLogin = function userLogin() {
 userReset = function userReset() {
     var ExpressBrute = require('express-brute'),
         BruteKnex = require('brute-knex'),
-        db = require('../../../data/db');
+        db = requireRoot('data/db');
 
     store = store || new BruteKnex({
         tablename: 'brute',
@@ -174,7 +174,7 @@ userReset = function userReset() {
 privateBlog = function privateBlog() {
     var ExpressBrute = require('express-brute'),
         BruteKnex = require('brute-knex'),
-        db = require('../../../data/db');
+        db = requireRoot('data/db');
 
     store = store || new BruteKnex({
         tablename: 'brute',

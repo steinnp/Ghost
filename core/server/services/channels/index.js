@@ -10,4 +10,4 @@
  */
 
 // Exports the top-level router
-module.exports = require('./parent-router');
+module.exports = requireRoot('services/channels/parent-router');

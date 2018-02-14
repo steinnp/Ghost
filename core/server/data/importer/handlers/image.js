@@ -1,9 +1,9 @@
 var _ = require('lodash'),
     Promise = require('bluebird'),
     path = require('path'),
-    config = require('../../../config'),
-    urlService = require('../../../services/url'),
-    storage = require('../../../adapters/storage'),
+    config = requireRoot('config'),
+    urlService = requireRoot('services/url'),
+    storage = requireRoot('adapters/storage'),
 
     ImageHandler;
 

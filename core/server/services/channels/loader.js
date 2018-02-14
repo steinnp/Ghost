@@ -1,7 +1,7 @@
 var debug = require('ghost-ignition').debug('channels:loader'),
     _ = require('lodash'),
     path = require('path'),
-    Channel = require('./Channel'),
+    Channel = requireRoot('services/channels/Channel'),
     channels = [];
 
 function loadConfig() {
@@ -13,7 +13,7 @@ function loadConfig() {
     try {
         channelConfig = require(path.join(process.cwd(), 'config.channels.json'));
     } catch (err) {
-        channelConfig = require('./config.channels.json');
+        channelConfig = requireRoot('services/channels/config.channels.json');
     }
 
     return channelConfig;

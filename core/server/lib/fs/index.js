@@ -2,10 +2,10 @@
 
 module.exports = {
     get readCSV() {
-        return require('./read-csv');
+        return requireRoot('lib/fs/read-csv');
     },
 
     get zipFolder() {
-        return require('./zip-folder');
+        return requireRoot('lib/fs/zip-folder');
     }
 };

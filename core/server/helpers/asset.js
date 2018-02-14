@@ -2,7 +2,7 @@
 // Usage: `{{asset "css/screen.css"}}`, `{{asset "css/screen.css" ghost="true"}}`
 //
 // Returns the path to the specified asset. The ghost flag outputs the asset path for the Ghost admin
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     _ = require('lodash'),
     getAssetUrl = proxy.metaData.getAssetUrl,
     SafeString = proxy.SafeString;

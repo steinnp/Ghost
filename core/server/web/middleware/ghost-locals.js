@@ -1,4 +1,4 @@
-var ghostVersion = require('../../lib/ghost-version');
+var ghostVersion = requireRoot('lib/ghost-version');
 
 // ### GhostLocals Middleware
 // Expose the standard locals that every request will need to have available

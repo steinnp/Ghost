@@ -1,5 +1,5 @@
-var labs = require('../labs'),
-    common = require('../../lib/common'),
+var labs = requireRoot('services/labs'),
+    common = requireRoot('lib/common'),
     authorize;
 
 authorize = {

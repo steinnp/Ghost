@@ -1,5 +1,5 @@
-var ghostBookshelf  = require('./base'),
-    Basetoken       = require('./base/token'),
+var ghostBookshelf  = requireRoot('models/base'),
+    Basetoken       = requireRoot('models/base/token'),
 
     Refreshtoken,
     Refreshtokens;

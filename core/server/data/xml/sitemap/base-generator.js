@@ -3,9 +3,9 @@ var _ = require('lodash'),
     moment = require('moment'),
     Promise = require('bluebird'),
     path = require('path'),
-    urlService = require('../../../services/url'),
-    common = require('../../../lib/common'),
-    localUtils = require('./utils'),
+    urlService = requireRoot('services/url'),
+    common = requireRoot('lib/common'),
+    localUtils = requireRoot('data/xml/sitemap/utils'),
     CHANGE_FREQ = 'weekly',
     XMLNS_DECLS;
 

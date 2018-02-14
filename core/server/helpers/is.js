@@ -1,7 +1,7 @@
 // # Is Helper
 // Usage: `{{#is "paged"}}`, `{{#is "index, paged"}}`
 // Checks whether we're in a given context.
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     _ = require('lodash'),
     logging = proxy.logging,
     i18n = proxy.i18n;

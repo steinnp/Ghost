@@ -1,7 +1,7 @@
 var _ = require('lodash'),
     Promise = require('bluebird'),
-    SchedulingBase = require('./SchedulingBase'),
-    common = require('../../lib/common'),
+    SchedulingBase = requireRoot('adapters/scheduling/SchedulingBase'),
+    common = requireRoot('lib/common'),
     cache = {};
 
 exports.createAdapter = function (options) {

@@ -1,11 +1,11 @@
 var fs = require('fs-extra'),
     path = require('path'),
     crypto = require('crypto'),
-    config = require('../../config'),
-    imageLib = require('../../lib/image'),
-    storage = require('../../adapters/storage'),
-    urlService = require('../../services/url'),
-    settingsCache = require('../../services/settings/cache'),
+    config = requireRoot('config'),
+    imageLib = requireRoot('lib/image'),
+    storage = requireRoot('adapters/storage'),
+    urlService = requireRoot('services/url'),
+    settingsCache = requireRoot('services/settings/cache'),
     buildContentResponse,
     content;
 

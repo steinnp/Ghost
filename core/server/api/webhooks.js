@@ -3,11 +3,11 @@
 // also known as "REST Hooks", see http://resthooks.org
 var Promise = require('bluebird'),
     _ = require('lodash'),
-    pipeline = require('../lib/promise/pipeline'),
-    localUtils = require('./utils'),
-    models = require('../models'),
-    common = require('../lib/common'),
-    request = require('../lib/request'),
+    pipeline = requireRoot('lib/promise/pipeline'),
+    localUtils = requireRoot('api/utils'),
+    models = requireRoot('models'),
+    common = requireRoot('lib/common'),
+    request = requireRoot('lib/request'),
     docName = 'webhooks',
     webhooks;
 

@@ -2,7 +2,7 @@
 // Usage: `{{#foreach data}}{{/foreach}}`
 //
 // Block helper designed for looping through posts
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     _ = require('lodash'),
     logging = proxy.logging,
     i18n = proxy.i18n,

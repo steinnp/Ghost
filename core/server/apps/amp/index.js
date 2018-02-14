@@ -1,9 +1,9 @@
-var router           = require('./lib/router'),
-    registerHelpers = require('./lib/helpers'),
+var router           = requireRoot('apps/amp/lib/router'),
+    registerHelpers = requireRoot('apps/amp/lib/helpers'),
 
     // Dirty requires
-    config = require('../../config'),
-    settingsCache = require('../../services/settings/cache');
+    config = requireRoot('config'),
+    settingsCache = requireRoot('services/settings/cache');
 
 module.exports = {
     activate: function activate(ghost) {

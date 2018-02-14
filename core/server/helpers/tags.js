@@ -6,7 +6,7 @@
 //
 // Note that the standard {{#each tags}} implementation is unaffected by this helper
 
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     _ = require('lodash'),
     SafeString = proxy.SafeString,
     templates = proxy.templates,

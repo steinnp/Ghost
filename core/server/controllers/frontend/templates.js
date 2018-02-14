@@ -5,8 +5,8 @@
 // TODO: consider where this should live as it deals with channels, singles, and errors
 var _ = require('lodash'),
     path = require('path'),
-    config = require('../../config'),
-    themes = require('../../services/themes'),
+    config = requireRoot('config'),
+    themes = requireRoot('services/themes'),
     _private = {};
 
 /**

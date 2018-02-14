@@ -1,5 +1,5 @@
-var backup = require('../../../db/backup'),
-    models = require('../../../../models');
+var backup = requireRoot('data/db/backup'),
+    models = requireRoot('models');
 
 module.exports = function before() {
     models.init();

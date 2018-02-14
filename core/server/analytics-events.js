@@ -1,7 +1,7 @@
 var _ = require('lodash'),
     Analytics = require('analytics-node'),
-    config = require('./config'),
-    common = require('./lib/common'),
+    config = requireRoot('config'),
+    common = requireRoot('lib/common'),
     analytics;
 
 module.exports.init = function () {

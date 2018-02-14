@@ -1,7 +1,7 @@
 var moment = require('moment-timezone'),
     Promise = require('bluebird'),
     _ = require('lodash'),
-    common = require('../../lib/common');
+    common = requireRoot('lib/common');
 
 module.exports = function (Bookshelf) {
     var ParentModel = Bookshelf.Model,

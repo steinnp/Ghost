@@ -1,5 +1,5 @@
 var uuid = require('uuid'),
-    common = require('../../lib/common');
+    common = requireRoot('lib/common');
 
 /**
  * @TODO:

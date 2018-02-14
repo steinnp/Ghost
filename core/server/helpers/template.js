@@ -1,7 +1,7 @@
 var templates = {},
     _ = require('lodash'),
-    proxy = require('./proxy'),
-    hbs = require('../services/themes/engine');
+    proxy = requireRoot('helpers/proxy'),
+    hbs = requireRoot('services/themes/engine');
 
 // ## Template utils
 

@@ -1,5 +1,5 @@
-var schema = require('../schema').checks,
-    urlService = require('../../services/url');
+var schema = requireRoot('data/schema').checks,
+    urlService = requireRoot('services/url');
 
 // This cleans the url from any `/amp` postfixes, so we'll never
 // output a url with `/amp` in the end, except for the needed `amphtml`

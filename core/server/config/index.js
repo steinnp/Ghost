@@ -2,7 +2,7 @@ var Nconf = require('nconf'),
     path = require('path'),
     _debug = require('ghost-ignition').debug._base,
     debug = _debug('ghost:config'),
-    localUtils = require('./utils'),
+    localUtils = requireRoot('config/utils'),
     env = process.env.NODE_ENV || 'development',
     _private = {};
 

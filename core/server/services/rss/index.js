@@ -1,1 +1,1 @@
-module.exports = require('./renderer');
+module.exports = requireRoot('services/rss/renderer');

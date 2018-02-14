@@ -10,32 +10,32 @@
  * - core index requires server
  * - overrides is the first package to load
  */
-require('./overrides');
-
 global.requireRoot = function(module) {
     return require(`${__dirname}/${module}`);
 }
 
+requireRoot('overrides');
+
 // Module dependencies
 var debug = require('ghost-ignition').debug('boot:init'),
-    config = require('./config'),
+    config = requireRoot('config'),
     Promise = require('bluebird'),
-    common = require('./lib/common'),
-    models = require('./models'),
-    permissions = require('./services/permissions'),
-    auth = require('./services/auth'),
-    dbHealth = require('./data/db/health'),
-    GhostServer = require('./ghost-server'),
-    scheduling = require('./adapters/scheduling'),
-    settings = require('./services/settings'),
-    themes = require('./services/themes'),
-    urlService = require('./services/url'),
+    common = requireRoot('lib/common'),
+    models = requireRoot('models'),
+    permissions = requireRoot('services/permissions'),
+    auth = requireRoot('services/auth'),
+    dbHealth = requireRoot('data/db/health'),
+    GhostServer = requireRoot('ghost-server'),
+    scheduling = requireRoot('adapters/scheduling'),
+    settings = requireRoot('services/settings'),
+    themes = requireRoot('services/themes'),
+    urlService = requireRoot('services/url'),
 
     // Services that need initialisation
-    apps = require('./services/apps'),
-    xmlrpc = require('./services/xmlrpc'),
-    slack = require('./services/slack'),
-    webhooks = require('./services/webhooks');
+    apps = requireRoot('services/apps'),
+    xmlrpc = requireRoot('services/xmlrpc'),
+    slack = requireRoot('services/slack'),
+    webhooks = requireRoot('services/webhooks');
 
 // ## Initialise Ghost
 function init() {
@@ -82,11 +82,11 @@ function init() {
         debug('Apps, XMLRPC, Slack done');
 
         // Setup our collection of express apps
-        parentApp = require('./web/parent-app')();
+        parentApp = requireRoot('web/parent-app')();
 
         // Initialise analytics events
         if (config.get('segment:key')) {
-            require('./analytics-events').init();
+            requireRoot('analytics-events').init();
         }
 
         debug('Express Apps done');

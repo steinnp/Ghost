@@ -1,4 +1,4 @@
-var urlService = require('../../services/url');
+var urlService = requireRoot('services/url');
 
 function getAuthorUrl(data, absolute) {
     var context = data.context ? data.context[0] : null;

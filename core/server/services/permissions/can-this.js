@@ -1,10 +1,10 @@
 var _ = require('lodash'),
     Promise = require('bluebird'),
-    models = require('../../models'),
-    common = require('../../lib/common'),
-    providers = require('./providers'),
-    parseContext = require('./parse-context'),
-    actionsMap = require('./actions-map-cache'),
+    models = requireRoot('models'),
+    common = requireRoot('lib/common'),
+    providers = requireRoot('services/permissions/providers'),
+    parseContext = requireRoot('services/permissions/parse-context'),
+    actionsMap = requireRoot('services/permissions/actions-map-cache'),
     canThis,
     CanThisResult;
 

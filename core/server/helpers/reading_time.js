@@ -10,9 +10,9 @@
 //
 // Returns estimated reading time for post
 
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     _ = require('lodash'),
-    schema = require('../data/schema').checks,
+    schema = requireRoot('data/schema').checks,
     SafeString = proxy.SafeString,
     localUtils = proxy.localUtils;
 

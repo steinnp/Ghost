@@ -11,12 +11,12 @@ const _ = require('lodash'),
     Promise = require('bluebird'),
     _debug = require('ghost-ignition').debug._base,
     debug = _debug('ghost:services:url'),
-    common = require('../../lib/common'),
+    common = requireRoot('lib/common'),
     // TODO: make this dynamic
-    resourceConfig = require('./config.json'),
-    Resource = require('./Resource'),
-    urlCache = require('./cache'),
-    localUtils = require('./utils');
+    resourceConfig = requireRoot('services/url/config.json'),
+    Resource = requireRoot('services/url/Resource'),
+    urlCache = requireRoot('services/url/cache'),
+    localUtils = requireRoot('services/url/utils');
 
 class UrlService {
     constructor(options) {

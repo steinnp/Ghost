@@ -2,8 +2,8 @@
 
 const crypto = require('crypto'),
     _ = require('lodash'),
-    constants = require('../lib/constants'),
-    ghostBookshelf = require('./base');
+    constants = requireRoot('lib/constants'),
+    ghostBookshelf = requireRoot('models/base');
 
 let Invite,
     Invites;

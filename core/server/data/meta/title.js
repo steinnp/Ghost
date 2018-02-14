@@ -1,5 +1,5 @@
 var _ = require('lodash'),
-    settingsCache = require('../../services/settings/cache');
+    settingsCache = requireRoot('services/settings/cache');
 
 function getTitle(data, root, options) {
     var title = '',

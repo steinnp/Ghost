@@ -2,10 +2,10 @@
  * # Fetch Data
  * Dynamically build and execute queries on the API for channels
  */
-var api = require('../../api'),
+var api = requireRoot('api'),
     _   = require('lodash'),
     Promise = require('bluebird'),
-    themes = require('../../services/themes'),
+    themes = requireRoot('services/themes'),
     queryDefaults,
     defaultPostQuery = {};
 

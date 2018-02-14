@@ -1,5 +1,5 @@
-var urlService = require('../../services/url'),
-    getUrl = require('./url');
+var urlService = requireRoot('services/url'),
+    getUrl = requireRoot('data/meta/url');
 
 function getCanonicalUrl(data) {
     var url = urlService.utils.urlJoin(urlService.utils.urlFor('home', true), getUrl(data, false));

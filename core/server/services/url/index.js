@@ -1,7 +1,7 @@
 'use strict';
 
-const config = require('../../config'),
-    UrlService = require('./UrlService'),
+const config = requireRoot('config'),
+    UrlService = requireRoot('services/url/UrlService'),
     urlService = new UrlService({
         disableUrlPreload: config.get('disableUrlPreload')
     });

@@ -2,18 +2,18 @@
 
 module.exports = {
     get url() {
-        return require('./url');
+        return requireRoot('lib/security/url');
     },
 
     get tokens() {
-        return require('./tokens');
+        return requireRoot('lib/security/tokens');
     },
 
     get string() {
-        return require('./string');
+        return requireRoot('lib/security/string');
     },
 
     get identifier() {
-        return require('./identifier');
+        return requireRoot('lib/security/identifier');
     }
 };

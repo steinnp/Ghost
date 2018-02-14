@@ -1,6 +1,6 @@
 var _ = require('lodash'),
-    ghostBookshelf = require('./base'),
-    common = require('../lib/common'),
+    ghostBookshelf = requireRoot('models/base'),
+    common = requireRoot('lib/common'),
     Tag,
     Tags;
 

@@ -1,8 +1,8 @@
 var _       = require('lodash'),
     xml     = require('xml'),
     moment  = require('moment'),
-    urlService = require('../../../services/url'),
-    localUtils   = require('./utils'),
+    urlService = requireRoot('services/url'),
+    localUtils   = requireRoot('data/xml/sitemap/utils'),
     RESOURCES,
     XMLNS_DECLS;
 

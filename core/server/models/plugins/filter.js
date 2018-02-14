@@ -1,6 +1,6 @@
 var _ = require('lodash'),
     gql = require('ghost-gql'),
-    common = require('../../lib/common'),
+    common = requireRoot('lib/common'),
     filter,
     filterUtils;
 

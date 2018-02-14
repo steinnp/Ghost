@@ -1,7 +1,7 @@
 var KnexMigrator = require('knex-migrator'),
-    config = require('../../config'),
-    common = require('../../lib/common'),
-    models = require('../../models');
+    config = requireRoot('config'),
+    common = requireRoot('lib/common'),
+    models = requireRoot('models');
 
 module.exports.check = function healthCheck() {
     var knexMigrator = new KnexMigrator({

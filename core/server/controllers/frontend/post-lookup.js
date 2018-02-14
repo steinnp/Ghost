@@ -2,8 +2,8 @@ var _          = require('lodash'),
     Promise    = require('bluebird'),
     url        = require('url'),
     routeMatch = require('path-match')(),
-    api        = require('../../api'),
-    settingsCache = require('../../services/settings/cache'),
+    api        = requireRoot('api'),
+    settingsCache = requireRoot('services/settings/cache'),
     optionsFormat = '/:options?';
 
 function getOptionsFormat(linkStructure) {

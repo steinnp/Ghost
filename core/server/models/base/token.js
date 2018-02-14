@@ -1,6 +1,6 @@
 var Promise = require('bluebird'),
-    ghostBookshelf = require('./index'),
-    common = require('../../lib/common'),
+    ghostBookshelf = requireRoot('models/base/index'),
+    common = requireRoot('lib/common'),
     Basetoken;
 
 Basetoken = ghostBookshelf.Model.extend({

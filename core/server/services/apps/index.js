@@ -1,11 +1,11 @@
 var debug = require('ghost-ignition').debug('services:apps'),
     _ = require('lodash'),
     Promise = require('bluebird'),
-    api = require('../../api'),
-    common = require('../../lib/common'),
-    config = require('../../config'),
-    settingsCache = require('../settings/cache'),
-    loader = require('./loader'),
+    api = requireRoot('api'),
+    common = requireRoot('lib/common'),
+    config = requireRoot('config'),
+    settingsCache = requireRoot('services/settings/cache'),
+    loader = requireRoot('services/apps/loader'),
     // Internal APps are in config
     internalApps = config.get('apps:internal'),
     // Holds the available apps

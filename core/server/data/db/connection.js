@@ -1,6 +1,6 @@
 var knex = require('knex'),
-    config = require('../../config'),
-    common = require('../../lib/common'),
+    config = requireRoot('config'),
+    common = requireRoot('lib/common'),
     knexInstance;
 
 // @TODO:

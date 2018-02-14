@@ -5,9 +5,9 @@ var debug = require('ghost-ignition').debug('server'),
     fs = require('fs-extra'),
     path = require('path'),
     _ = require('lodash'),
-    config = require('./config'),
-    urlService = require('./services/url'),
-    common = require('./lib/common'),
+    config = requireRoot('config'),
+    urlService = requireRoot('services/url'),
+    common = requireRoot('lib/common'),
     moment = require('moment');
 
 /**

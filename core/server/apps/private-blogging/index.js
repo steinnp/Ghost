@@ -1,9 +1,9 @@
-var config = require('../../config'),
-    urlService = require('../../services/url'),
-    common = require('../../lib/common'),
-    middleware = require('./lib/middleware'),
-    router = require('./lib/router'),
-    registerHelpers = require('./lib/helpers'),
+var config = requireRoot('config'),
+    urlService = requireRoot('services/url'),
+    common = requireRoot('lib/common'),
+    middleware = requireRoot('apps/private-blogging/lib/middleware'),
+    router = requireRoot('apps/private-blogging/lib/router'),
+    registerHelpers = requireRoot('apps/private-blogging/lib/helpers'),
     checkSubdir;
 
 checkSubdir = function checkSubdir() {

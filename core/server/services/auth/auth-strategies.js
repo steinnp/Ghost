@@ -1,7 +1,7 @@
 var _ = require('lodash'),
-    models = require('../../models'),
-    common = require('../../lib/common'),
-    security = require('../../lib/security'),
+    models = requireRoot('models'),
+    common = requireRoot('lib/common'),
+    security = requireRoot('lib/security'),
     strategies;
 
 strategies = {

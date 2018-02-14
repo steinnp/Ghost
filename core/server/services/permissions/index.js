@@ -1,8 +1,8 @@
 // canThis(someUser).edit.posts([id]|[[ids]])
 // canThis(someUser).edit.post(somePost|somePostId)
 
-var models = require('../../models'),
-    actionsMap = require('./actions-map-cache'),
+var models = requireRoot('models'),
+    actionsMap = requireRoot('services/permissions/actions-map-cache'),
     init;
 
 init = function init(options) {
@@ -17,8 +17,8 @@ init = function init(options) {
 
 module.exports = {
     init: init,
-    canThis: require('./can-this'),
+    canThis: requireRoot('services/permissions/can-this'),
     // @TODO: Make it so that we don't need to export these
-    parseContext: require('./parse-context'),
-    applyPublicRules: require('./public')
+    parseContext: requireRoot('services/permissions/parse-context'),
+    applyPublicRules: requireRoot('services/permissions/public')
 };

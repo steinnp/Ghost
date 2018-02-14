@@ -4,9 +4,9 @@ var fs = require('fs-extra'),
     url = require('url'),
     path = require('path'),
     debug = require('ghost-ignition').debug('custom-redirects'),
-    config = require('../../config'),
-    common = require('../../lib/common'),
-    validation = require('../../data/validation'),
+    config = requireRoot('config'),
+    common = requireRoot('lib/common'),
+    validation = requireRoot('data/validation'),
     customRedirectsRouter,
     _private = {};
 

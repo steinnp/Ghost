@@ -1,6 +1,6 @@
-var config = require('../../config'),
-    escapeExpression = require('../../services/themes/engine').escapeExpression,
-    social = require('../../lib/social'),
+var config = requireRoot('config'),
+    escapeExpression = requireRoot('services/themes/engine').escapeExpression,
+    social = requireRoot('lib/social'),
     _ = require('lodash');
 
 function schemaImageObject(metaDataVal) {

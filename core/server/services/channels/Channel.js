@@ -1,7 +1,7 @@
 'use strict';
 
 var _ = require('lodash'),
-    config  = require('../../config'),
+    config  = requireRoot('config'),
     defaultPostOptions = {};
 
 class Channel {

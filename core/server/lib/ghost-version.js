@@ -1,7 +1,7 @@
 'use strict';
 
 const semver = require('semver'),
-    packageInfo = require('../../../package.json'),
+    packageInfo = requireRoot('../../package.json'),
     version = packageInfo.version,
     plainVersion = version.match(/^(\d+\.)?(\d+\.)?(\d+)/)[0];
 

@@ -12,9 +12,9 @@
 //  req.baseUrl = /blog
 //  req.path =  /ghost/signin/
 
-var urlService = require('../../services/url'),
-    common = require('../../lib/common'),
-    localUtils = require('../utils'),
+var urlService = requireRoot('services/url'),
+    common = requireRoot('lib/common'),
+    localUtils = requireRoot('web/utils'),
     uncapitalise;
 
 uncapitalise = function uncapitalise(req, res, next) {

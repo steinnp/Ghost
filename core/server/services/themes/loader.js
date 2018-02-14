@@ -1,7 +1,7 @@
 var debug = require('ghost-ignition').debug('themes:loader'),
-    config = require('../../config'),
-    packageJSON = require('../../lib/fs/package-json'),
-    themeList = require('./list'),
+    config = requireRoot('config'),
+    packageJSON = requireRoot('lib/fs/package-json'),
+    themeList = requireRoot('services/themes/list'),
     loadAllThemes,
     loadOneTheme;
 

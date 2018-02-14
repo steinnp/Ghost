@@ -4,7 +4,7 @@
 // Returns the URL for the current object scope i.e. If inside a post scope will return post permalink
 // `absolute` flag outputs absolute URL, else URL is relative
 
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     SafeString = proxy.SafeString,
     getMetaDataUrl = proxy.metaData.getMetaDataUrl;
 

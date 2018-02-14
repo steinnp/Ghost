@@ -1,5 +1,5 @@
-var urlService = require('../../services/url'),
-    getContextObject = require('./context_object.js'),
+var urlService = requireRoot('services/url'),
+    getContextObject = requireRoot('data/meta/context_object.js'),
     _ = require('lodash');
 
 function getCoverImage(data) {

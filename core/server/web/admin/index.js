@@ -1,1 +1,1 @@
-module.exports = require('./app');
+module.exports = requireRoot('web/admin/app');

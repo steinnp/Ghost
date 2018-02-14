@@ -1,10 +1,10 @@
 var _ = require('lodash'),
     xml = require('xml'),
-    config = require('../config'),
-    urlService = require('../services/url'),
-    common = require('../lib/common'),
-    request = require('../lib/request'),
-    settingsCache = require('./settings/cache'),
+    config = requireRoot('config'),
+    urlService = requireRoot('services/url'),
+    common = requireRoot('lib/common'),
+    request = requireRoot('lib/request'),
+    settingsCache = requireRoot('services/settings/cache'),
 
     defaultPostSlugs = [
         'welcome',

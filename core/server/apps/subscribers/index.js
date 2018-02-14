@@ -1,9 +1,9 @@
-var router     = require('./lib/router'),
-    registerHelpers = require('./lib/helpers'),
+var router     = requireRoot('apps/subscribers/lib/router'),
+    registerHelpers = requireRoot('apps/subscribers/lib/helpers'),
 
     // Dirty requires
-    config = require('../../config'),
-    labs = require('../../services/labs');
+    config = requireRoot('config'),
+    labs = requireRoot('services/labs');
 
 module.exports = {
     activate: function activate(ghost) {

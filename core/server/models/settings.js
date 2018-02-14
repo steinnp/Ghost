@@ -3,9 +3,9 @@ var Settings,
     _ = require('lodash'),
     uuid = require('uuid'),
     crypto = require('crypto'),
-    ghostBookshelf = require('./base'),
-    common = require('../lib/common'),
-    validation = require('../data/validation'),
+    ghostBookshelf = requireRoot('models/base'),
+    common = requireRoot('lib/common'),
+    validation = requireRoot('data/validation'),
 
     internalContext = {context: {internal: true}},
 
@@ -15,7 +15,7 @@ var Settings,
 // It's much easier for us to work with it as a single level
 // instead of iterating those categories every time
 function parseDefaultSettings() {
-    var defaultSettingsInCategories = require('../data/schema/').defaultSettings,
+    var defaultSettingsInCategories = requireRoot('data/schema/').defaultSettings,
         defaultSettingsFlattened = {},
         dynamicDefault = {
             db_hash: uuid.v4(),

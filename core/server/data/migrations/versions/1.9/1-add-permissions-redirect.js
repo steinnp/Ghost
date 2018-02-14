@@ -1,7 +1,7 @@
 var _ = require('lodash'),
-    utils = require('../../../schema/fixtures/utils'),
-    permissions = require('../../../../services/permissions'),
-    common = require('../../../../lib/common'),
+    utils = requireRoot('data/schema/fixtures/utils'),
+    permissions = requireRoot('services/permissions'),
+    common = requireRoot('lib/common'),
     resource = 'redirect',
     _private = {};
 

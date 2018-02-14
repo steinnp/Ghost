@@ -4,7 +4,7 @@
 // Password input used on private.hbs for password-protected blogs
 
 // (less) dirty requires
-var proxy = require('../../../../helpers/proxy'),
+var proxy = requireRoot('helpers/proxy'),
     SafeString = proxy.SafeString,
     templates = proxy.templates;
 

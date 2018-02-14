@@ -1,7 +1,7 @@
-var passport = require('./passport'),
-    authorize = require('./authorize'),
-    authenticate = require('./authenticate'),
-    oauth = require('./oauth');
+var passport = requireRoot('services/auth/passport'),
+    authorize = requireRoot('services/auth/authorize'),
+    authenticate = requireRoot('services/auth/authenticate'),
+    oauth = requireRoot('services/auth/oauth');
 
 exports.init = function (options) {
     oauth.init(options);

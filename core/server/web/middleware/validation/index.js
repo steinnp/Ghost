@@ -1,2 +1,2 @@
-exports.upload = require('./upload');
-exports.blogIcon = require('./blog-icon');
+exports.upload = requireRoot('web/middleware/validation/upload');
+exports.blogIcon = requireRoot('web/middleware/validation/blog-icon');

@@ -2,7 +2,7 @@
 // Usage: `{{twitter_url}}` or `{{twitter_url author.twitter}}`
 //
 // Output a url for a twitter username
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     socialUrls = proxy.socialUrls,
     localUtils = proxy.localUtils;
 

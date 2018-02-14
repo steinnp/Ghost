@@ -1,6 +1,6 @@
 var url = require('url'),
     debug = require('ghost-ignition').debug('url-redirects'),
-    urlService = require('../../services/url'),
+    urlService = requireRoot('services/url'),
     urlRedirects,
     _private = {};
 

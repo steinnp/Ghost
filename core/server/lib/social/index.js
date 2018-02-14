@@ -2,6 +2,6 @@
 
 module.exports = {
     get urls() {
-        return require('./urls');
+        return requireRoot('lib/social/urls');
     }
 };

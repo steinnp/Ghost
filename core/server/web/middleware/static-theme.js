@@ -1,9 +1,9 @@
 var _ = require('lodash'),
     express = require('express'),
     path = require('path'),
-    config = require('../../config'),
-    constants = require('../../lib/constants'),
-    themeUtils = require('../../services/themes');
+    config = requireRoot('config'),
+    constants = requireRoot('lib/constants'),
+    themeUtils = requireRoot('services/themes');
 
 function isBlackListedFileType(file) {
     var blackListedFileTypes = ['.hbs', '.md', '.json'],

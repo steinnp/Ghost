@@ -4,7 +4,7 @@
 // `{{page_url 2}}`
 //
 // Returns the URL for the page specified in the current object context.
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     getPaginatedUrl = proxy.metaData.getPaginatedUrl;
 
 // We use the name page_url to match the helper for consistency:

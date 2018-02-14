@@ -1,23 +1,23 @@
 var express = require('express'),
     // This essentially provides the controllers for the routes
-    api = require('../../api'),
+    api = requireRoot('api'),
 
     // Middleware
-    mw = require('./middleware'),
+    mw = requireRoot('web/api/middleware'),
 
     // API specific
-    auth = require('../../services/auth'),
-    cors = require('../middleware/api/cors'),
-    brute = require('../middleware/brute'),
+    auth = requireRoot('services/auth'),
+    cors = requireRoot('web/middleware/api/cors'),
+    brute = requireRoot('web/middleware/brute'),
 
     // Handling uploads & imports
     tmpdir = require('os').tmpdir,
     upload = require('multer')({dest: tmpdir()}),
-    validation = require('../middleware/validation'),
+    validation = requireRoot('web/middleware/validation'),
 
     // Temporary
     // @TODO find a more appy way to do this!
-    labs = require('../middleware/labs');
+    labs = requireRoot('web/middleware/labs');
 
 // @TODO refactor/clean this up - how do we want the routing to work long term?
 module.exports = function apiRoutes() {

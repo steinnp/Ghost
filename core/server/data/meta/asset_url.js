@@ -1,10 +1,10 @@
 'use strict';
 
 const crypto = require('crypto'),
-    config = require('../../config'),
-    imageLib = require('../../lib/image'),
-    urlService = require('../../services/url'),
-    packageInfo = require('../../../../package.json');
+    config = requireRoot('config'),
+    imageLib = requireRoot('lib/image'),
+    urlService = requireRoot('services/url'),
+    packageInfo = requireRoot('../../package.json');
 
 /**
  * Serve either uploaded favicon or default

@@ -10,7 +10,7 @@
 // Block helper: `{{#author}}{{/author}}`
 // This is the default handlebars behaviour of dropping into the author object scope
 
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     _ = require('lodash'),
     SafeString = proxy.SafeString,
     handlebars = proxy.hbs.handlebars,

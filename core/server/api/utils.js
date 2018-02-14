@@ -2,9 +2,9 @@
 // Shared helpers for working with the API
 var Promise = require('bluebird'),
     _ = require('lodash'),
-    permissions = require('../services/permissions'),
-    validation = require('../data/validation'),
-    common = require('../lib/common'),
+    permissions = requireRoot('services/permissions'),
+    validation = requireRoot('data/validation'),
+    common = requireRoot('lib/common'),
     utils;
 
 utils = {

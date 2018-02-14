@@ -2,7 +2,7 @@
 // Usage: `{{meta_description}}`
 //
 // Page description used for sharing and SEO
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     getMetaDataDescription = proxy.metaData.getMetaDataDescription;
 
 // We use the name meta_description to match the helper for consistency:

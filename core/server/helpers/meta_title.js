@@ -2,7 +2,7 @@
 // Usage: `{{meta_title}}`
 //
 // Page title used for sharing and SEO
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     getMetaDataTitle = proxy.metaData.getMetaDataTitle;
 
 // We use the name meta_title to match the helper for consistency:

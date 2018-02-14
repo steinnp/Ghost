@@ -1,2 +1,2 @@
-module.exports = require('./fixtures');
-module.exports.utils = require('./utils');
+module.exports = requireRoot('data/schema/fixtures/fixtures');
+module.exports.utils = requireRoot('data/schema/fixtures/utils');

@@ -1,9 +1,9 @@
-var urlService = require('../services/url'),
-    filters = require('../filters'),
-    handleError = require('./frontend/error'),
-    postLookup = require('./frontend/post-lookup'),
-    renderEntry = require('./frontend/render-entry'),
-    setRequestIsSecure = require('./frontend/secure');
+var urlService = requireRoot('services/url'),
+    filters = requireRoot('filters'),
+    handleError = requireRoot('controllers/frontend/error'),
+    postLookup = requireRoot('controllers/frontend/post-lookup'),
+    renderEntry = requireRoot('controllers/frontend/render-entry'),
+    setRequestIsSecure = requireRoot('controllers/frontend/secure');
 
 // This here is a controller.
 // It renders entries = individual posts or pages

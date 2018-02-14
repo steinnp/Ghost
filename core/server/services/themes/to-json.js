@@ -1,8 +1,8 @@
 var _ = require('lodash'),
-    themeList = require('./list'),
-    active = require('./active'),
-    packageJSON = require('../../lib/fs/package-json'),
-    settingsCache = require('../settings/cache');
+    themeList = requireRoot('services/themes/list'),
+    active = requireRoot('services/themes/active'),
+    packageJSON = requireRoot('lib/fs/package-json'),
+    settingsCache = requireRoot('services/settings/cache');
 
 /**
  *

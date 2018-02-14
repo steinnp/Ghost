@@ -1,6 +1,6 @@
 var _ = require('lodash'),
-    common = require('../lib/common'),
-    api = require('../api'),
+    common = requireRoot('lib/common'),
+    api = requireRoot('api'),
     modelAttrs;
 
 // TODO: this can be removed once all events pass a .toJSON object through

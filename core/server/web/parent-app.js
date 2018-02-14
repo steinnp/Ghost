@@ -2,15 +2,15 @@ var debug = require('ghost-ignition').debug('app'),
     express = require('express'),
 
     // App requires
-    config = require('../config'),
+    config = requireRoot('config'),
 
     // middleware
     compress = require('compression'),
     netjet = require('netjet'),
 
     // local middleware
-    ghostLocals = require('./middleware/ghost-locals'),
-    logRequest = require('./middleware/log-request');
+    ghostLocals = requireRoot('web/middleware/ghost-locals'),
+    logRequest = requireRoot('web/middleware/log-request');
 
 module.exports = function setupParentApp() {
     debug('ParentApp setup start');
@@ -45,13 +45,13 @@ module.exports = function setupParentApp() {
     // API
     // @TODO: finish refactoring the API app
     // @TODO: decide what to do with these paths - config defaults? config overrides?
-    parentApp.use('/ghost/api/v0.1/', require('./api/app')());
+    parentApp.use('/ghost/api/v0.1/', requireRoot('web/api/app')());
 
     // ADMIN
-    parentApp.use('/ghost', require('./admin')());
+    parentApp.use('/ghost', requireRoot('web/admin')());
 
     // BLOG
-    parentApp.use(require('./site')());
+    parentApp.use(requireRoot('web/site')());
 
     debug('ParentApp setup end');
 

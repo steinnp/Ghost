@@ -2,7 +2,7 @@ module.exports = {
     name: 'markdown',
     type: 'dom',
     render: function (opts) {
-        var converters = require('../converters'),
+        var converters = requireRoot('lib/mobiledoc/converters'),
             html, element;
 
         // convert markdown to HTML ready for insertion into dom

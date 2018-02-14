@@ -1,7 +1,7 @@
 'use strict';
 
 const debug = require('ghost-ignition').debug('importer:subscribers'),
-    BaseImporter = require('./base');
+    BaseImporter = requireRoot('data/importer/importers/data/base');
 
 class SubscribersImporter extends BaseImporter {
     constructor(allDataFromFile) {

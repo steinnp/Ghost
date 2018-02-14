@@ -1,7 +1,7 @@
 'use strict';
 
 const _ = require('lodash'),
-    localUtils = require('./utils'),
+    localUtils = requireRoot('services/url/utils'),
     prefetchDefaults = {
         context: {
             internal: true
@@ -22,7 +22,7 @@ class Resource {
     fetchAll() {
         const options = _.defaults(this.prefetchOptions, prefetchDefaults);
 
-        return require('../../api')[this.api]
+        return requireRoot('api')[this.api]
             .browse(options)
             .then((resp) => {
                 this.items = resp[this.api];

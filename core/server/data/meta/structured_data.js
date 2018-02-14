@@ -1,4 +1,4 @@
-var social = require('../../lib/social');
+var social = requireRoot('lib/social');
 
 function getStructuredData(metaData) {
     var structuredData,

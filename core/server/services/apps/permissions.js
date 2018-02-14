@@ -1,7 +1,7 @@
 var fs = require('fs-extra'),
     Promise = require('bluebird'),
     path = require('path'),
-    packageJSON = require('../../lib/fs/package-json');
+    packageJSON = requireRoot('lib/fs/package-json');
 
 function AppPermissions(appPath) {
     this.appPath = appPath;

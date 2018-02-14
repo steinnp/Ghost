@@ -1,10 +1,10 @@
 'use strict';
 
 const merge = require('lodash/merge'),
-    utils = require('../../../schema/fixtures/utils'),
-    models = require('../../../../models'),
-    permissions = require('../../../../services/permissions'),
-    logging = require('../../../../lib/common/logging'),
+    utils = requireRoot('data/schema/fixtures/utils'),
+    models = requireRoot('models'),
+    permissions = requireRoot('services/permissions'),
+    logging = requireRoot('lib/common/logging'),
     _private = {};
 
 _private.addRole = function addRole(options) {

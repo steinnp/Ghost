@@ -2,18 +2,18 @@
 
 module.exports = {
     get blogIcon() {
-        return require('./blog-icon');
+        return requireRoot('lib/image/blog-icon');
     },
 
     get imageSize() {
-        return require('./image-size');
+        return requireRoot('lib/image/image-size');
     },
 
     get gravatar() {
-        return require('./gravatar');
+        return requireRoot('lib/image/gravatar');
     },
 
     get imageSizeCache() {
-        return require('./cached-image-size-from-url');
+        return requireRoot('lib/image/cached-image-size-from-url');
     }
 };

@@ -1,5 +1,5 @@
-var config = require('../../config'),
-    common = require('../../lib/common');
+var config = requireRoot('config'),
+    common = requireRoot('lib/common');
 
 module.exports = function maintenance(req, res, next) {
     if (config.get('maintenance').enabled) {

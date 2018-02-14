@@ -1,7 +1,7 @@
 var _ = require('lodash'),
     StorageBase = require('ghost-storage-base'),
-    config = require('../../config'),
-    common = require('../../lib/common'),
+    config = requireRoot('config'),
+    common = requireRoot('lib/common'),
     storage = {};
 
 /**

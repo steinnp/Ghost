@@ -1,6 +1,6 @@
 var _ = require('lodash'),
-    config = require('../../config'),
-    urlService = require('../../services/url');
+    config = requireRoot('config'),
+    urlService = requireRoot('services/url');
 
 function getPaginatedUrl(page, data, absolute) {
     // If we don't have enough information, return null right away

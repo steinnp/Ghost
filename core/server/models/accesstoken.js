@@ -1,6 +1,6 @@
-var ghostBookshelf = require('./base'),
-    Basetoken = require('./base/token'),
-    common = require('../lib/common'),
+var ghostBookshelf = requireRoot('models/base'),
+    Basetoken = requireRoot('models/base/token'),
+    common = requireRoot('lib/common'),
 
     Accesstoken,
     Accesstokens;

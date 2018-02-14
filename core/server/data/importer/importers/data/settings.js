@@ -3,9 +3,9 @@
 const debug = require('ghost-ignition').debug('importer:settings'),
     Promise = require('bluebird'),
     _ = require('lodash'),
-    BaseImporter = require('./base'),
-    models = require('../../../../models'),
-    defaultSettings = require('../../../schema/default-settings.json'),
+    BaseImporter = requireRoot('data/importer/importers/data/base'),
+    models = requireRoot('models'),
+    defaultSettings = requireRoot('data/schema/default-settings.json'),
     labsDefaults = JSON.parse(defaultSettings.blog.labs.defaultValue);
 
 class SettingsImporter extends BaseImporter {

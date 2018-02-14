@@ -1,7 +1,7 @@
 var _ = require('lodash'),
-    utils = require('../../../schema/fixtures/utils'),
-    permissions = require('../../../../services/permissions'),
-    logging = require('../../../../lib/common/logging'),
+    utils = requireRoot('data/schema/fixtures/utils'),
+    permissions = requireRoot('services/permissions'),
+    logging = requireRoot('lib/common/logging'),
     resource = 'webhook',
     _private = {};
 

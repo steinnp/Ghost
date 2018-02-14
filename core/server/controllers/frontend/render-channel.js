@@ -1,6 +1,6 @@
 var debug = require('ghost-ignition').debug('channels:render'),
-    formatResponse = require('./format-response'),
-    renderer = require('./renderer');
+    formatResponse = requireRoot('controllers/frontend/format-response'),
+    renderer = requireRoot('controllers/frontend/renderer');
 
 module.exports = function renderChannel(req, res) {
     debug('renderChannel called');

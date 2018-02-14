@@ -2,15 +2,15 @@
 // RESTful API for browsing the configuration
 var Promise = require('bluebird'),
     _ = require('lodash'),
-    urlService = require('../services/url'),
-    models = require('../models'),
-    config = require('../config'),
-    settingsCache = require('../services/settings/cache'),
-    ghostVersion = require('../lib/ghost-version'),
+    urlService = requireRoot('services/url'),
+    models = requireRoot('models'),
+    config = requireRoot('config'),
+    settingsCache = requireRoot('services/settings/cache'),
+    ghostVersion = requireRoot('lib/ghost-version'),
     configuration;
 
 function fetchAvailableTimezones() {
-    var timezones = require('../data/timezones.json');
+    var timezones = requireRoot('data/timezones.json');
     return timezones;
 }
 

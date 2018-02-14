@@ -1,5 +1,5 @@
 var crypto = require('crypto'),
-    generateFeed = require('./generate-feed'),
+    generateFeed = requireRoot('services/rss/generate-feed'),
     feedCache = {};
 
 module.exports.getXML = function getFeedXml(baseUrl, data) {

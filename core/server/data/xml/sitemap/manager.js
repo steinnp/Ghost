@@ -1,10 +1,10 @@
 var _       = require('lodash'),
     Promise = require('bluebird'),
-    IndexMapGenerator = require('./index-generator'),
-    PagesMapGenerator = require('./page-generator'),
-    PostsMapGenerator = require('./post-generator'),
-    UsersMapGenerator = require('./user-generator'),
-    TagsMapGenerator  = require('./tag-generator'),
+    IndexMapGenerator = requireRoot('data/xml/sitemap/index-generator'),
+    PagesMapGenerator = requireRoot('data/xml/sitemap/page-generator'),
+    PostsMapGenerator = requireRoot('data/xml/sitemap/post-generator'),
+    UsersMapGenerator = requireRoot('data/xml/sitemap/user-generator'),
+    TagsMapGenerator  = requireRoot('data/xml/sitemap/tag-generator'),
     SiteMapManager;
 
 SiteMapManager = function (opts) {

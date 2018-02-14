@@ -1,5 +1,5 @@
 var _ = require('lodash'),
-    db = require('../../../data/db'),
+    db = requireRoot('data/db'),
 
     // private
     doRaw,

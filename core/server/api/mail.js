@@ -2,12 +2,12 @@
 // API for sending Mail
 
 var Promise = require('bluebird'),
-    pipeline = require('../lib/promise/pipeline'),
-    localUtils = require('./utils'),
-    models = require('../models'),
-    common = require('../lib/common'),
-    mail = require('../services/mail'),
-    notificationsAPI = require('./notifications'),
+    pipeline = requireRoot('lib/promise/pipeline'),
+    localUtils = requireRoot('api/utils'),
+    models = requireRoot('models'),
+    common = requireRoot('lib/common'),
+    mail = requireRoot('services/mail'),
+    notificationsAPI = requireRoot('api/notifications'),
     docName = 'mail',
     mailer,
     apiMail;

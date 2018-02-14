@@ -1,4 +1,4 @@
-var ghostBookshelf = require('./base'),
+var ghostBookshelf = requireRoot('models/base'),
     App,
     Apps;
 

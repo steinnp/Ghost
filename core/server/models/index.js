@@ -7,7 +7,7 @@ var _ = require('lodash'),
     models;
 
 // enable event listeners
-require('./base/listeners');
+requireRoot('models/base/listeners');
 
 /**
  * Expose all models
@@ -34,7 +34,7 @@ models = [
 ];
 
 function init() {
-    exports.Base = require('./base');
+    exports.Base = requireRoot('models/base');
 
     models.forEach(function (name) {
         _.extend(exports, require('./' + name));

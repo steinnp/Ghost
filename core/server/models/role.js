@@ -1,7 +1,7 @@
 var _ = require('lodash'),
-    ghostBookshelf = require('./base'),
+    ghostBookshelf = requireRoot('models/base'),
     Promise = require('bluebird'),
-    common = require('../lib/common'),
+    common = requireRoot('lib/common'),
 
     Role,
     Roles;

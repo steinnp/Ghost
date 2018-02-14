@@ -6,7 +6,7 @@
 //
 // Enables tag-safe truncation of content by characters or words.
 
-var proxy = require('./proxy'),
+var proxy = requireRoot('helpers/proxy'),
     _ = require('lodash'),
     downsize = require('downsize'),
     SafeString = proxy.SafeString;

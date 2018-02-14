@@ -2,21 +2,21 @@ var debug = require('ghost-ignition').debug('admin'),
     express = require('express'),
 
     // App requires
-    config = require('../../config'),
-    constants = require('../../lib/constants'),
-    urlService = require('../../services/url'),
+    config = requireRoot('config'),
+    constants = requireRoot('lib/constants'),
+    urlService = requireRoot('services/url'),
 
     // Middleware
     // Admin only middleware
-    adminMiddleware = require('./middleware'),
+    adminMiddleware = requireRoot('web/admin/middleware'),
     serveStatic = require('express').static,
 
     // Global/shared middleware
-    cacheControl = require('../middleware/cache-control'),
-    urlRedirects = require('../middleware/url-redirects'),
-    errorHandler = require('../middleware/error-handler'),
-    maintenance = require('../middleware/maintenance'),
-    prettyURLs = require('../middleware/pretty-urls');
+    cacheControl = requireRoot('web/middleware/cache-control'),
+    urlRedirects = requireRoot('web/middleware/url-redirects'),
+    errorHandler = requireRoot('web/middleware/error-handler'),
+    maintenance = requireRoot('web/middleware/maintenance'),
+    prettyURLs = requireRoot('web/middleware/pretty-urls');
 
 module.exports = function setupAdminApp() {
     debug('Admin setup start');
@@ -39,7 +39,7 @@ module.exports = function setupAdminApp() {
     ));
 
     // Service Worker for offline support
-    adminApp.get(/^\/(sw.js|sw-registration.js)$/, require('./serviceworker'));
+    adminApp.get(/^\/(sw.js|sw-registration.js)$/, requireRoot('web/admin/serviceworker'));
 
     // Ember CLI's live-reload script
     if (config.get('env') === 'development') {
@@ -66,7 +66,7 @@ module.exports = function setupAdminApp() {
     adminApp.use(adminMiddleware);
 
     // Finally, routing
-    adminApp.get('*', require('./controller'));
+    adminApp.get('*', requireRoot('web/admin/controller'));
 
     adminApp.use(errorHandler.pageNotFound);
     adminApp.use(errorHandler.handleHTMLResponse);

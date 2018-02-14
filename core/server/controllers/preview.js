@@ -1,9 +1,9 @@
-var api = require('../api'),
-    urlService = require('../services/url'),
-    filters = require('../filters'),
-    handleError = require('./frontend/error'),
-    renderEntry = require('./frontend/render-entry'),
-    setRequestIsSecure = require('./frontend/secure');
+var api = requireRoot('api'),
+    urlService = requireRoot('services/url'),
+    filters = requireRoot('filters'),
+    handleError = requireRoot('controllers/frontend/error'),
+    renderEntry = requireRoot('controllers/frontend/render-entry'),
+    setRequestIsSecure = requireRoot('controllers/frontend/secure');
 
 // This here is a controller.
 // The "route" is handled in site/routes.js

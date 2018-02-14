@@ -1,7 +1,7 @@
 var got = require('got'),
     _ = require('lodash'),
-    validator = require('../data/validation').validator,
-    common = require('./common');
+    validator = requireRoot('data/validation').validator,
+    common = requireRoot('lib/common');
 
 module.exports = function request(url, options) {
     if (_.isEmpty(url) || !validator.isURL(url)) {

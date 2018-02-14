@@ -2,7 +2,7 @@
 //
 // Extends Bookshelf.Model with a `fetchPage` method. Handles everything to do with paginated requests.
 var _ = require('lodash'),
-    common = require('../../lib/common'),
+    common = requireRoot('lib/common'),
     defaults,
     paginationUtils,
     pagination;

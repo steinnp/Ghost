@@ -1,5 +1,5 @@
 var hbs = require('express-hbs'),
-    config = require('../../config'),
+    config = requireRoot('config'),
     instance = hbs.create();
 
 // @TODO think about a config option for this e.g. theme.devmode?

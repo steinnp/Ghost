@@ -1,8 +1,8 @@
 var SimpleDom = require('simple-dom'),
     Renderer = require('mobiledoc-dom-renderer').default,
-    common = require('../../common'),
-    atoms = require('../atoms'),
-    cards = require('../cards'),
+    common = requireRoot('lib/common'),
+    atoms = requireRoot('lib/mobiledoc/atoms'),
+    cards = requireRoot('lib/mobiledoc/cards'),
     options = {
         dom: new SimpleDom.Document(),
         cards: cards,

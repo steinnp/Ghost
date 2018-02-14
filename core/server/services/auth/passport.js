@@ -1,7 +1,7 @@
 var ClientPasswordStrategy = require('passport-oauth2-client-password').Strategy,
     BearerStrategy = require('passport-http-bearer').Strategy,
     passport = require('passport'),
-    authStrategies = require('./auth-strategies');
+    authStrategies = requireRoot('services/auth/auth-strategies');
 
 /**
  * auth types:

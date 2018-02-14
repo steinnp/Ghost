@@ -1,5 +1,5 @@
 var Promise = require('bluebird'),
-    models = require('../../../../models');
+    models = requireRoot('models');
 
 module.exports = function before() {
     models.init();

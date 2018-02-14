@@ -2,11 +2,11 @@
 // RESTful API for the User resource
 var Promise = require('bluebird'),
     _ = require('lodash'),
-    pipeline = require('../lib/promise/pipeline'),
-    localUtils = require('./utils'),
-    canThis = require('../services/permissions').canThis,
-    models = require('../models'),
-    common = require('../lib/common'),
+    pipeline = requireRoot('lib/promise/pipeline'),
+    localUtils = requireRoot('api/utils'),
+    canThis = requireRoot('services/permissions').canThis,
+    models = requireRoot('models'),
+    common = requireRoot('lib/common'),
     docName = 'users',
     // TODO: implement created_by, updated_by
     allowedIncludes = ['count.posts', 'permissions', 'roles', 'roles.permissions'],

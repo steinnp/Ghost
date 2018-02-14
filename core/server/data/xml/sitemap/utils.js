@@ -1,4 +1,4 @@
-var urlService = require('../../../services/url'),
+var urlService = requireRoot('services/url'),
     sitemapsUtils;
 
 sitemapsUtils = {

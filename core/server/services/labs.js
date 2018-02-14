@@ -1,8 +1,8 @@
-var settingsCache = require('./settings/cache'),
+var settingsCache = requireRoot('services/settings/cache'),
     _ = require('lodash'),
     Promise = require('bluebird'),
-    SafeString = require('./themes/engine').SafeString,
-    common = require('../lib/common'),
+    SafeString = requireRoot('services/themes/engine').SafeString,
+    common = requireRoot('lib/common'),
     labs = module.exports = {};
 
 labs.isSet = function isSet(flag) {

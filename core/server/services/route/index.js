@@ -11,12 +11,12 @@
  */
 
 // This is the main router, that gets extended & mounted /site
-module.exports.siteRouter = require('./site-router');
+module.exports.siteRouter = requireRoot('services/route/site-router');
 
 // We expose this via the App Proxy, so that Apps can register routes
-module.exports.appRouter = require('./app-router');
+module.exports.appRouter = requireRoot('services/route/app-router');
 
 // Classes for other parts of Ghost to extend
-module.exports.ParentRouter = require('./ParentRouter');
+module.exports.ParentRouter = requireRoot('services/route/ParentRouter');
 
-module.exports.registry = require('./registry');
+module.exports.registry = requireRoot('services/route/registry');

@@ -1,10 +1,10 @@
 var Promise = require('bluebird'),
     moment = require('moment'),
-    localUtils = require('../utils'),
-    common = require('../../../lib/common'),
-    models = require('../../../models'),
-    schedules = require('../../../api/schedules'),
-    urlService = require('../../../services/url'),
+    localUtils = requireRoot('adapters/scheduling/utils'),
+    common = requireRoot('lib/common'),
+    models = requireRoot('models'),
+    schedules = requireRoot('api/schedules'),
+    urlService = requireRoot('services/url'),
     _private = {};
 
 _private.normalize = function normalize(options) {

@@ -1,9 +1,9 @@
 'use strict';
 
 const debug = require('ghost-ignition').debug('importer:base'),
-    common = require('../../../../lib/common'),
-    sequence = require('../../../../lib/promise/sequence'),
-    models = require('../../../../models'),
+    common = requireRoot('lib/common'),
+    sequence = requireRoot('lib/promise/sequence'),
+    models = requireRoot('models'),
     _ = require('lodash'),
     Promise = require('bluebird');
 
