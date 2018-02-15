@@ -1,4 +1,4 @@
-var urlService = require('../../../services/url'),
+var urlService = require('services/url'),
     sitemapsUtils;
 
 sitemapsUtils = {

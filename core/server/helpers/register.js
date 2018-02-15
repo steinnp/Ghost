@@ -1,7 +1,7 @@
-var hbs = require('../services/themes/engine'),
+var hbs = require('services/themes/engine'),
     Promise = require('bluebird'),
-    config = require('../config'),
-    proxy = require('./proxy');
+    config = require('config'),
+    proxy = require('helpers/proxy');
 
 // Register an async handlebars helper for a given handlebars instance
 function asyncHelperWrapper(hbs, name, fn) {

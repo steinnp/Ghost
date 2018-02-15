@@ -1,7 +1,7 @@
-var hr = require('./hr'),
-    html = require('./html'),
-    image = require('./image'),
-    markdown = require('./markdown'),
-    cardMarkdown = require('./card-markdown');
+var hr = require('lib/mobiledoc/cards/hr'),
+    html = require('lib/mobiledoc/cards/html'),
+    image = require('lib/mobiledoc/cards/image'),
+    markdown = require('lib/mobiledoc/cards/markdown'),
+    cardMarkdown = require('lib/mobiledoc/cards/card-markdown');
 
 module.exports = [hr, html, image, markdown, cardMarkdown];

@@ -3,8 +3,8 @@
  * A collection of utilities for handling settings including a cache
  */
 
-var SettingsModel = require('../../models/settings').Settings,
-    SettingsCache = require('./cache');
+var SettingsModel = require('models/settings').Settings,
+    SettingsCache = require('services/settings/cache');
 
 module.exports = {
     init: function init() {

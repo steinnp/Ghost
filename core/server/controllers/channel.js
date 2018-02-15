@@ -1,11 +1,11 @@
 var _ = require('lodash'),
-    common = require('../lib/common'),
-    security = require('../lib/security'),
-    filters = require('../filters'),
-    handleError = require('./frontend/error'),
-    fetchData = require('./frontend/fetch-data'),
-    setRequestIsSecure = require('./frontend/secure'),
-    renderChannel = require('./frontend/render-channel');
+    common = require('lib/common'),
+    security = require('lib/security'),
+    filters = require('filters'),
+    handleError = require('controllers/frontend/error'),
+    fetchData = require('controllers/frontend/fetch-data'),
+    setRequestIsSecure = require('controllers/frontend/secure'),
+    renderChannel = require('controllers/frontend/render-channel');
 
 // This here is a controller.
 // The "route" is handled in services/channels/router.js

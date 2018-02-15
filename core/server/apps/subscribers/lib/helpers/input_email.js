@@ -4,7 +4,7 @@
 // Used by `{{subscribe_form}}`
 
 // (less) dirty requires
-var proxy = require('../../../../helpers/proxy'),
+var proxy = require('helpers/proxy'),
     SafeString = proxy.SafeString,
     templates = proxy.templates;
 

@@ -2,7 +2,7 @@
 // `{{navigation}}`
 // Outputs navigation menu of static urls
 
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     _ = require('lodash'),
     SafeString = proxy.SafeString,
     i18n = proxy.i18n,

@@ -3,7 +3,7 @@
 //
 // Checks if a post has a particular property
 
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     _ = require('lodash'),
     logging = proxy.logging,
     i18n = proxy.i18n,

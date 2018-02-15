@@ -1,6 +1,6 @@
 var path = require('path'),
     Module = require('module'),
-    common = require('../../lib/common'),
+    common = require('lib/common'),
     _ = require('lodash');
 
 function AppSandbox(opts) {

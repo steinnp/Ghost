@@ -3,8 +3,8 @@
 const debug = require('ghost-ignition').debug('importer:tags'),
     Promise = require('bluebird'),
     _ = require('lodash'),
-    BaseImporter = require('./base'),
-    models = require('../../../../models');
+    BaseImporter = require('data/importer/importers/data/base'),
+    models = require('models');
 
 class TagsImporter extends BaseImporter {
     constructor(allDataFromFile) {

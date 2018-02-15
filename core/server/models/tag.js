@@ -1,5 +1,5 @@
-var ghostBookshelf = require('./base'),
-    common = require('../lib/common'),
+var ghostBookshelf = require('models/base'),
+    common = require('lib/common'),
     Tag,
     Tags;
 

@@ -1,5 +1,5 @@
 var url = require('url'),
-    spamPrevention = require('./api/spam-prevention');
+    spamPrevention = require('web/middleware/api/spam-prevention');
 
 /**
  * We set ignoreIP to false, because we tell brute-knex to use `req.ip`.

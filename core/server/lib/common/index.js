@@ -2,18 +2,18 @@
 
 module.exports = {
     get i18n() {
-        return require('./i18n');
+        return require('lib/common/i18n');
     },
 
     get events() {
-        return require('./events');
+        return require('lib/common/events');
     },
 
     get errors() {
-        return require('./errors');
+        return require('lib/common/errors');
     },
 
     get logging() {
-        return require('./logging');
+        return require('lib/common/logging');
     }
 };

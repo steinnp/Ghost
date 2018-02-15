@@ -1,7 +1,7 @@
 var downsize = require('downsize'),
     RSS = require('rss'),
-    urlService = require('../../services/url'),
-    filters = require('../../filters'),
+    urlService = require('services/url'),
+    filters = require('filters'),
     generateFeed,
     generateItem,
     generateTags;

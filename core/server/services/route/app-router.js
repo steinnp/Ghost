@@ -1,4 +1,4 @@
-var ParentRouter = require('./ParentRouter'),
+var ParentRouter = require('services/route/ParentRouter'),
     appRouter = new ParentRouter('apps');
 
 module.exports = appRouter;

@@ -1,6 +1,6 @@
 var _ = require('lodash'),
-    config = require('../../../../config'),
-    database = require('../../../db');
+    config = require('config'),
+    database = require('data/db');
 
 module.exports = function after() {
     // do not close database connection in test mode, because all tests are executed one after another

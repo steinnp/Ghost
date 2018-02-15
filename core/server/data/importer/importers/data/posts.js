@@ -3,8 +3,8 @@
 const debug = require('ghost-ignition').debug('importer:posts'),
     _ = require('lodash'),
     uuid = require('uuid'),
-    BaseImporter = require('./base'),
-    validation = require('../../../validation');
+    BaseImporter = require('data/importer/importers/data/base'),
+    validation = require('data/validation');
 
 class PostsImporter extends BaseImporter {
     constructor(allDataFromFile) {

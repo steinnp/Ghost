@@ -1,6 +1,6 @@
 var Promise = require('bluebird'),
     fs = require('fs-extra'),
-    storage = require('../adapters/storage'),
+    storage = require('adapters/storage'),
     upload;
 
 /**

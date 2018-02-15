@@ -1,8 +1,8 @@
 var _ = require('lodash'),
     hbs = require('express-hbs'),
-    config = require('../../config'),
-    common = require('../../lib/common'),
-    templates = require('../../controllers/frontend/templates'),
+    config = require('config'),
+    common = require('lib/common'),
+    templates = require('controllers/frontend/templates'),
     escapeExpression = hbs.Utils.escapeExpression,
     _private = {},
     errorHandler = {};
@@ -13,7 +13,7 @@ var _ = require('lodash'),
  */
 _private.createHbsEngine = function createHbsEngine() {
     var engine = hbs.create();
-    engine.registerHelper('asset', require('../../helpers/asset'));
+    engine.registerHelper('asset', require('helpers/asset'));
 
     return engine.express4();
 };

@@ -2,9 +2,9 @@
 
 const debug = require('ghost-ignition').debug('admin:controller'),
     path = require('path'),
-    config = require('../../config'),
-    updateCheck = require('../../update-check'),
-    common = require('../../lib/common');
+    config = require('config'),
+    updateCheck = require('update-check'),
+    common = require('lib/common');
 
 // Route: index
 // Path: /ghost/

@@ -1,12 +1,12 @@
 var Promise = require('bluebird'),
     _ = require('lodash'),
     moment = require('moment'),
-    pipeline = require('../lib/promise/pipeline'),
-    localUtils = require('./utils'),
-    models = require('../models'),
-    config = require('../config'),
-    common = require('../lib/common'),
-    postsAPI = require('../api/posts');
+    pipeline = require('lib/promise/pipeline'),
+    localUtils = require('api/utils'),
+    models = require('models'),
+    config = require('config'),
+    common = require('lib/common'),
+    postsAPI = require('api/posts');
 
 /**
  * Publish a scheduled post

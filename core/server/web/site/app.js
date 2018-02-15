@@ -3,34 +3,34 @@ var debug = require('ghost-ignition').debug('blog'),
     express = require('express'),
 
     // App requires
-    config = require('../../config'),
-    constants = require('../../lib/constants'),
-    storage = require('../../adapters/storage'),
-    urlService = require('../../services/url'),
+    config = require('config'),
+    constants = require('lib/constants'),
+    storage = require('adapters/storage'),
+    urlService = require('services/url'),
 
     // This should probably be an internal app
-    sitemapHandler = require('../../data/xml/sitemap/handler'),
+    sitemapHandler = require('data/xml/sitemap/handler'),
 
     // Route Service
-    siteRoutes = require('./routes'),
+    siteRoutes = require('web/site/routes'),
 
     // Global/shared middleware
-    cacheControl = require('../middleware/cache-control'),
-    errorHandler = require('../middleware/error-handler'),
-    frontendClient = require('../middleware/frontend-client'),
-    maintenance = require('../middleware/maintenance'),
-    prettyURLs = require('../middleware/pretty-urls'),
-    urlRedirects = require('../middleware/url-redirects'),
+    cacheControl = require('web/middleware/cache-control'),
+    errorHandler = require('web/middleware/error-handler'),
+    frontendClient = require('web/middleware/frontend-client'),
+    maintenance = require('web/middleware/maintenance'),
+    prettyURLs = require('web/middleware/pretty-urls'),
+    urlRedirects = require('web/middleware/url-redirects'),
 
     // local middleware
-    servePublicFile = require('../middleware/serve-public-file'),
-    staticTheme = require('../middleware/static-theme'),
-    customRedirects = require('../middleware/custom-redirects'),
-    serveFavicon = require('../middleware/serve-favicon'),
-    adminRedirects = require('../middleware/admin-redirects'),
+    servePublicFile = require('web/middleware/serve-public-file'),
+    staticTheme = require('web/middleware/static-theme'),
+    customRedirects = require('web/middleware/custom-redirects'),
+    serveFavicon = require('web/middleware/serve-favicon'),
+    adminRedirects = require('web/middleware/admin-redirects'),
 
     // middleware for themes
-    themeMiddleware = require('../../services/themes').middleware;
+    themeMiddleware = require('services/themes').middleware;
 
 module.exports = function setupSiteApp() {
     debug('Site setup start');
@@ -77,7 +77,7 @@ module.exports = function setupSiteApp() {
     // We do this here, at the top level, because helpers require so much stuff.
     // Moving this to being inside themes, where it probably should be requires the proxy to be refactored
     // Else we end up with circular dependencies
-    require('../../helpers').loadCoreHelpers();
+    require('helpers').loadCoreHelpers();
     debug('Helpers done');
 
     // Theme middleware

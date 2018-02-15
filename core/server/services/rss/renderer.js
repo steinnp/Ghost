@@ -1,5 +1,5 @@
 var _ = require('lodash'),
-    rssCache = require('./cache');
+    rssCache = require('services/rss/cache');
 
 module.exports.render = function render(res, baseUrl, data) {
     // Format data - this is the same as what Express does

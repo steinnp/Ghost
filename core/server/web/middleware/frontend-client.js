@@ -1,6 +1,6 @@
-var api = require('../../api'),
-    labs = require('../../services/labs'),
-    common = require('../../lib/common');
+var api = require('api'),
+    labs = require('services/labs'),
+    common = require('lib/common');
 
 module.exports = function getFrontendClient(req, res, next) {
     if (labs.isSet('publicAPI') !== true) {

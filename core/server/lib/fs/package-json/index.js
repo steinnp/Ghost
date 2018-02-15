@@ -14,14 +14,14 @@
 
 module.exports = {
     get read() {
-        return require('./read');
+        return require('lib/fs/package-json/read');
     },
 
     get parse() {
-        return require('./parse');
+        return require('lib/fs/package-json/parse');
     },
 
     get filter() {
-        return require('./filter');
+        return require('lib/fs/package-json/filter');
     }
 };

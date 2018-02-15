@@ -4,11 +4,11 @@ const fs = require('fs-extra'),
     Promise = require('bluebird'),
     moment = require('moment'),
     path = require('path'),
-    config = require('../config'),
-    common = require('../lib/common'),
-    validation = require('../data/validation'),
-    localUtils = require('./utils'),
-    customRedirectsMiddleware = require('../web/middleware/custom-redirects');
+    config = require('config'),
+    common = require('lib/common'),
+    validation = require('data/validation'),
+    localUtils = require('api/utils'),
+    customRedirectsMiddleware = require('web/middleware/custom-redirects');
 
 let redirectsAPI,
     _private = {};

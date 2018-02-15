@@ -4,7 +4,7 @@
 
 var Promise = require('bluebird'),
     fs = require('fs-extra'),
-    common = require('../../common');
+    common = require('lib/common');
 
 /**
  * Parse package.json and validate it has

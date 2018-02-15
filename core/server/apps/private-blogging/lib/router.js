@@ -1,9 +1,9 @@
 var path                = require('path'),
     express             = require('express'),
-    middleware          = require('./middleware'),
+    middleware          = require('apps/private-blogging/lib/middleware'),
     bodyParser          = require('body-parser'),
-    renderer            = require('../../../controllers/frontend/renderer'),
-    brute               = require('../../../web/middleware/brute'),
+    renderer            = require('controllers/frontend/renderer'),
+    brute               = require('web/middleware/brute'),
 
     templateName = 'private',
 

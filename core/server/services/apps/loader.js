@@ -1,13 +1,13 @@
 var path = require('path'),
     _ = require('lodash'),
     Promise = require('bluebird'),
-    config = require('../../config'),
-    common = require('../../lib/common'),
+    config = require('config'),
+    common = require('lib/common'),
 
-    AppProxy = require('./proxy'),
-    AppSandbox = require('./sandbox'),
-    AppDependencies = require('./dependencies'),
-    AppPermissions = require('./permissions'),
+    AppProxy = require('services/apps/proxy'),
+    AppSandbox = require('services/apps/sandbox'),
+    AppDependencies = require('services/apps/dependencies'),
+    AppPermissions = require('services/apps/permissions'),
 
     loader;
 

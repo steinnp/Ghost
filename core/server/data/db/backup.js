@@ -3,10 +3,10 @@
 var fs = require('fs-extra'),
     path = require('path'),
     Promise = require('bluebird'),
-    config = require('../../config'),
-    common = require('../../lib/common'),
-    urlService = require('../../services/url'),
-    exporter = require('../export'),
+    config = require('config'),
+    common = require('lib/common'),
+    urlService = require('services/url'),
+    exporter = require('data/export'),
 
     writeExportFile,
     backup;

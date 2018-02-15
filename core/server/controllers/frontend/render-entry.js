@@ -1,6 +1,6 @@
 var debug = require('ghost-ignition').debug('channels:render-post'),
-    formatResponse = require('./format-response'),
-    renderer = require('./renderer');
+    formatResponse = require('controllers/frontend/format-response'),
+    renderer = require('controllers/frontend/renderer');
 /*
  * Sets the response context around an entry (post or page)
  * and renders it with the correct template.

@@ -1,6 +1,6 @@
 var debug = require('ghost-ignition').debug('renderer'),
-    setContext = require('./context'),
-    templates = require('./templates');
+    setContext = require('controllers/frontend/context'),
+    templates = require('controllers/frontend/templates');
 
 module.exports = function renderer(req, res, data) {
     // Context

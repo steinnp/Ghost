@@ -1,5 +1,5 @@
 var _ = require('lodash'),
-    defaultConfig = require('./defaults'),
+    defaultConfig = require('services/themes/config/defaults'),
     allowedKeys = ['posts_per_page'];
 
 module.exports.create = function configLoader(packageJson) {

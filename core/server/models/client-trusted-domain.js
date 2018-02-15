@@ -1,4 +1,4 @@
-var ghostBookshelf = require('./base'),
+var ghostBookshelf = require('models/base'),
 
     ClientTrustedDomain,
     ClientTrustedDomains;

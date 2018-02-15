@@ -3,10 +3,10 @@
 var _ = require('lodash'),
     Promise = require('bluebird'),
     validator = require('validator'),
-    config = require('../../config'),
-    common = require('../../lib/common'),
-    settingsCache = require('../settings/cache'),
-    urlService = require('../url');
+    config = require('config'),
+    common = require('lib/common'),
+    settingsCache = require('services/settings/cache'),
+    urlService = require('services/url');
 
 function GhostMailer() {
     var nodemailer = require('nodemailer'),

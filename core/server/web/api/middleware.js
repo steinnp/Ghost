@@ -1,7 +1,7 @@
-var prettyURLs = require('../middleware/pretty-urls'),
-    cors = require('../middleware/api/cors'),
-    urlRedirects = require('../middleware/url-redirects'),
-    auth = require('../../services/auth');
+var prettyURLs = require('web/middleware/pretty-urls'),
+    cors = require('web/middleware/api/cors'),
+    urlRedirects = require('web/middleware/url-redirects'),
+    auth = require('services/auth');
 
 /**
  * Auth Middleware Packages

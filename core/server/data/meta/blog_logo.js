@@ -1,6 +1,6 @@
-var urlService = require('../../services/url'),
-    settingsCache = require('../../services/settings/cache'),
-    imageLib = require('../../lib/image');
+var urlService = require('services/url'),
+    settingsCache = require('services/settings/cache'),
+    imageLib = require('lib/image');
 
 function getBlogLogo() {
     var logo = {};

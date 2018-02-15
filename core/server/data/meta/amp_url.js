@@ -1,5 +1,5 @@
-var urlService = require('../../services/url'),
-    getUrl = require('./url'),
+var urlService = require('services/url'),
+    getUrl = require('data/meta/url'),
     _      = require('lodash');
 
 function getAmplUrl(data) {

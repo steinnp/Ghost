@@ -11,8 +11,8 @@
  * 3. data - used for telling the difference between posts and pages
  */
 
-var config = require('../../config'),
-    labs = require('../../services/labs'),
+var config = require('config'),
+    labs = require('services/labs'),
 
     // Context patterns, should eventually come from Channel configuration
     privatePattern = new RegExp('^\\/' + config.get('routeKeywords').private + '\\/'),

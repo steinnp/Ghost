@@ -4,7 +4,7 @@
 //
 // Returns URI encoded string
 
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     SafeString = proxy.SafeString;
 
 module.exports = function encode(string, options) {

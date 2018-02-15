@@ -2,7 +2,7 @@
 // Usage: `{{facebook_url}}` or `{{facebook_url author.facebook}}`
 //
 // Output a url for a facebook username
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     socialUrls = proxy.socialUrls,
     localUtils = proxy.localUtils;
 

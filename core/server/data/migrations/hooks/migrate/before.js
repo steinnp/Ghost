@@ -1,5 +1,5 @@
-var backup = require('../../../db/backup'),
-    models = require('../../../../models');
+var backup = require('data/db/backup'),
+    models = require('models');
 
 module.exports = function before() {
     models.init();

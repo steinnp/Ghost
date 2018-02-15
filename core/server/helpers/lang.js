@@ -12,7 +12,7 @@
 // Language tags in HTML and XML
 // https://www.w3.org/International/articles/language-tags/
 
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     i18n = proxy.i18n,
     SafeString = proxy.SafeString;
 

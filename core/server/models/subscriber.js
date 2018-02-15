@@ -1,6 +1,6 @@
 var Promise = require('bluebird'),
-    ghostBookshelf = require('./base'),
-    common = require('../lib/common'),
+    ghostBookshelf = require('models/base'),
+    common = require('lib/common'),
     Subscriber,
     Subscribers;
 

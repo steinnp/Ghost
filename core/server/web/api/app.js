@@ -3,18 +3,18 @@ var debug = require('ghost-ignition').debug('api'),
     express = require('express'),
 
     // routes
-    routes = require('./routes'),
+    routes = require('web/api/routes'),
 
     // Include the middleware
 
     // API specific
-    versionMatch = require('../middleware/api/version-match'), // global
+    versionMatch = require('web/middleware/api/version-match'), // global
 
     // Shared
     bodyParser = require('body-parser'), // global, shared
-    cacheControl = require('../middleware/cache-control'), // global, shared
-    maintenance = require('../middleware/maintenance'), // global, shared
-    errorHandler = require('../middleware/error-handler'); // global, shared
+    cacheControl = require('web/middleware/cache-control'), // global, shared
+    maintenance = require('web/middleware/maintenance'), // global, shared
+    errorHandler = require('web/middleware/error-handler'); // global, shared
 
 module.exports = function setupApiApp() {
     debug('API setup start');

@@ -1,8 +1,8 @@
 var _      = require('lodash'),
-    api    = require('../../../api'),
-    urlService = require('../../../services/url'),
+    api    = require('api'),
+    urlService = require('services/url'),
     validator        = require('validator'),
-    BaseMapGenerator = require('./base-generator'),
+    BaseMapGenerator = require('data/xml/sitemap/base-generator'),
     // @TODO: figure out a way to get rid of this
     activeStates   = ['active', 'warn-1', 'warn-2', 'warn-3', 'warn-4', 'locked'];
 
