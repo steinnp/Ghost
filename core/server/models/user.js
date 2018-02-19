@@ -1,6 +1,5 @@
 var _ = require('lodash'),
     Promise = require('bluebird'),
-    bcrypt = require('bcryptjs'),
     validator = require('validator'),
     ObjectId = require('bson-objectid'),
     ghostBookshelf = require('models/base'),
@@ -10,10 +9,6 @@ var _ = require('lodash'),
     imageLib = require('lib/image'),
     pipeline = require('lib/promise/pipeline'),
     validation = require('data/validation'),
-
-    bcryptGenSalt = Promise.promisify(bcrypt.genSalt),
-    bcryptHash = Promise.promisify(bcrypt.hash),
-    bcryptCompare = Promise.promisify(bcrypt.compare),
     activeStates = ['active', 'warn-1', 'warn-2', 'warn-3', 'warn-4'],
     /**
      * inactive: owner user before blog setup, suspended users
@@ -24,25 +19,14 @@ var _ = require('lodash'),
     User,
     Users;
 
-/**
- * generate a random salt and then hash the password with that salt
- */
-function generatePasswordHash(password) {
-    return bcryptGenSalt().then(function (salt) {
-        return bcryptHash(password, salt);
-    });
-}
-
 User = ghostBookshelf.Model.extend({
 
     tableName: 'users',
 
     defaults: function defaults() {
-        var baseDefaults = ghostBookshelf.Model.prototype.defaults.call(this);
-
-        return _.merge({
+        return {
             password: security.identifier.uid(50)
-        }, baseDefaults);
+        };
     },
 
     emitChange: function emitChange(event, options) {
@@ -104,6 +88,22 @@ User = ghostBookshelf.Model.extend({
 
         ghostBookshelf.Model.prototype.onSaving.apply(this, arguments);
 
+        /**
+         * Bookshelf call order:
+         *   - onSaving
+         *   - onValidate (validates the model against the schema)
+         *
+         * Before we can generate a slug, we have to ensure that the name is not blank.
+         */
+        if (!this.get('name')) {
+            throw new common.errors.ValidationError({
+                message: common.i18n.t('notices.data.validation.index.valueCannotBeBlank', {
+                    tableName: this.tableName,
+                    columnKey: 'name'
+                })
+            });
+        }
+
         // If the user's email is set & has changed & we are not importing
         if (self.hasChanged('email') && self.get('email') && !options.importing) {
             tasks.gravatar = (function lookUpGravatar() {
@@ -145,7 +145,7 @@ User = ghostBookshelf.Model.extend({
          *     normal behaviour if not (set random password, lock user, and hash password)
          *   - no validations should run, when importing
          */
-        if (self.isNew() || self.hasChanged('password')) {
+        if (self.hasChanged('password')) {
             this.set('password', String(this.get('password')));
 
             // CASE: import with `importPersistUser` should always be an bcrypt password already,
@@ -173,7 +173,7 @@ User = ghostBookshelf.Model.extend({
             }
 
             tasks.hashPassword = (function hashPassword() {
-                return generatePasswordHash(self.get('password'))
+                return security.password.hash(self.get('password'))
                     .then(function (hash) {
                         self.set('password', hash);
                     });
@@ -181,24 +181,6 @@ User = ghostBookshelf.Model.extend({
         }
 
         return Promise.props(tasks);
-    },
-
-    // For the user model ONLY it is possible to disable validations.
-    // This is used to bypass validation during the credential check, and must never be done with user-provided data
-    // Should be removed when #3691 is done
-    onValidate: function validate() {
-        var opts = arguments[1],
-            userData;
-
-        if (opts && _.has(opts, 'validate') && opts.validate === false) {
-            return;
-        }
-
-        // use the base toJSON since this model's overridden toJSON
-        // removes fields and we want everything to run through the validator.
-        userData = ghostBookshelf.Model.prototype.toJSON.call(this);
-
-        return validation.validateSchema(this.tableName, userData);
     },
 
     toJSON: function toJSON(unfilteredOptions) {
@@ -672,50 +654,41 @@ User = ghostBookshelf.Model.extend({
     check: function check(object) {
         var self = this;
 
-        return this.getByEmail(object.email).then(function then(user) {
-            if (!user) {
-                return Promise.reject(new common.errors.NotFoundError({
-                    message: common.i18n.t('errors.models.user.noUserWithEnteredEmailAddr')
-                }));
-            }
+        return this.getByEmail(object.email)
+            .then(function then(user) {
+                if (!user) {
+                    throw new common.errors.NotFoundError({
+                        message: common.i18n.t('errors.models.user.noUserWithEnteredEmailAddr')
+                    });
+                }
 
-            if (user.isLocked()) {
-                return Promise.reject(new common.errors.NoPermissionError({
-                    message: common.i18n.t('errors.models.user.accountLocked')
-                }));
-            }
+                if (user.isLocked()) {
+                    throw new common.errors.NoPermissionError({
+                        message: common.i18n.t('errors.models.user.accountLocked')
+                    });
+                }
 
-            if (user.isInactive()) {
-                return Promise.reject(new common.errors.NoPermissionError({
-                    message: common.i18n.t('errors.models.user.accountSuspended')
-                }));
-            }
+                if (user.isInactive()) {
+                    throw new common.errors.NoPermissionError({
+                        message: common.i18n.t('errors.models.user.accountSuspended')
+                    });
+                }
 
-            return self.isPasswordCorrect({plainPassword: object.password, hashedPassword: user.get('password')})
-                .then(function then() {
-                    return Promise.resolve(user.set({status: 'active', last_seen: new Date()}).save({validate: false}))
-                        .catch(function handleError(err) {
-                            // If we get a validation or other error during this save, catch it and log it, but don't
-                            // cause a login error because of it. The user validation is not important here.
-                            common.logging.error(new common.errors.GhostError({
-                                err: err,
-                                context: common.i18n.t('errors.models.user.userUpdateError.context'),
-                                help: common.i18n.t('errors.models.user.userUpdateError.help')
-                            }));
+                return self.isPasswordCorrect({plainPassword: object.password, hashedPassword: user.get('password')})
+                    .then(function then() {
+                        user.set({status: 'active', last_seen: new Date()});
+                        return user.save();
+                    });
+            })
+            .catch(function (err) {
+                if (err.message === 'NotFound' || err.message === 'EmptyResponse') {
+                    throw new common.errors.NotFoundError({
+                        message: common.i18n.t('errors.models.user.noUserWithEnteredEmailAddr')
+                    });
+                }
 
-                            return user;
-                        });
-                })
-                .catch(function onError(err) {
-                    return Promise.reject(err);
-                });
-        }, function handleError(error) {
-            if (error.message === 'NotFound' || error.message === 'EmptyResponse') {
-                return Promise.reject(new common.errors.NotFoundError({message: common.i18n.t('errors.models.user.noUserWithEnteredEmailAddr')}));
-            }
-
-            return Promise.reject(error);
-        });
+                throw err;
+            });
     },
 
     isPasswordCorrect: function isPasswordCorrect(object) {
@@ -728,7 +701,7 @@ User = ghostBookshelf.Model.extend({
             }));
         }
 
-        return bcryptCompare(plainPassword, hashedPassword)
+        return security.password.compare(plainPassword, hashedPassword)
             .then(function (matched) {
                 if (matched) {
                     return;
