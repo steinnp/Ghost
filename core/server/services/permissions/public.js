@@ -1,7 +1,7 @@
 var _ = require('lodash'),
     Promise = require('bluebird'),
-    common = require('../../lib/common'),
-    parseContext = require('./parse-context'),
+    common = require('lib/common'),
+    parseContext = require('services/permissions/parse-context'),
     _private = {};
 
 _private.applyStatusRules = function applyStatusRules(docName, method, opts) {

@@ -2,8 +2,8 @@ var util = require('util'),
     moment = require('moment'),
     request = require('superagent'),
     debug = require('ghost-ignition').debug('scheduling-default'),
-    SchedulingBase = require('./SchedulingBase'),
-    common = require('../../lib/common');
+    SchedulingBase = require('adapters/scheduling/SchedulingBase'),
+    common = require('lib/common');
 
 /**
  * allJobs is a sorted list by time attribute

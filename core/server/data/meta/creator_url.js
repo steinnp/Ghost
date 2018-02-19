@@ -1,4 +1,4 @@
-var getContextObject = require('./context_object.js'),
+var getContextObject = require('data/meta/context_object.js'),
     _                = require('lodash');
 
 function getCreatorTwitterUrl(data) {

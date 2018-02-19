@@ -1,11 +1,11 @@
 var oauth2orize = require('oauth2orize'),
     _ = require('lodash'),
     passport = require('passport'),
-    models = require('../../models'),
-    authUtils = require('./utils'),
-    spamPrevention = require('../../web/middleware/api/spam-prevention'),
-    common = require('../../lib/common'),
-    knex = require('../../data/db').knex,
+    models = require('models'),
+    authUtils = require('services/auth/utils'),
+    spamPrevention = require('web/middleware/api/spam-prevention'),
+    common = require('lib/common'),
+    knex = require('data/db').knex,
     oauthServer,
     oauth;
 

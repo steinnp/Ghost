@@ -1,6 +1,6 @@
 var Promise = require('bluebird'),
     _ = require('lodash'),
-    imageLib = require('../../lib/image');
+    imageLib = require('lib/image');
 
 /**
  * Get Image dimensions

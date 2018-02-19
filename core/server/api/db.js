@@ -1,13 +1,13 @@
 // # DB API
 // API for DB operations
 var Promise = require('bluebird'),
-    pipeline = require('../lib/promise/pipeline'),
-    localUtils = require('./utils'),
-    exporter = require('../data/export'),
-    importer = require('../data/importer'),
-    backupDatabase = require('../data/db/backup'),
-    models = require('../models'),
-    common = require('../lib/common'),
+    pipeline = require('lib/promise/pipeline'),
+    localUtils = require('api/utils'),
+    exporter = require('data/export'),
+    importer = require('data/importer'),
+    backupDatabase = require('data/db/backup'),
+    models = require('models'),
+    common = require('lib/common'),
     docName = 'db',
     db;
 

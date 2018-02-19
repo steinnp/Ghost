@@ -2,7 +2,7 @@
 // `{{pagination}}`
 // Outputs previous and next buttons, along with info about the current page
 
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     _ = require('lodash'),
     errors = proxy.errors,
     i18n = proxy.i18n,

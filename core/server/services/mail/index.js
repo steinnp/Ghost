@@ -1,2 +1,2 @@
-exports.GhostMailer = require('./GhostMailer');
-exports.utils = require('./utils');
+exports.GhostMailer = require('services/mail/GhostMailer');
+exports.utils = require('services/mail/utils');

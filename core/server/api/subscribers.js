@@ -3,11 +3,11 @@
 var Promise = require('bluebird'),
     _ = require('lodash'),
     fs = require('fs-extra'),
-    pipeline = require('../lib/promise/pipeline'),
-    fsLib = require('../lib/fs'),
-    localUtils = require('./utils'),
-    models = require('../models'),
-    common = require('../lib/common'),
+    pipeline = require('lib/promise/pipeline'),
+    fsLib = require('lib/fs'),
+    localUtils = require('api/utils'),
+    models = require('models'),
+    common = require('lib/common'),
     docName = 'subscribers',
     subscribers;
 

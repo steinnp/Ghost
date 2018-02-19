@@ -1,7 +1,7 @@
 'use strict';
 
 const debug = require('ghost-ignition').debug('importer:roles'),
-    BaseImporter = require('./base');
+    BaseImporter = require('data/importer/importers/data/base');
 
 class RolesImporter extends BaseImporter {
     constructor(allDataFromFile) {

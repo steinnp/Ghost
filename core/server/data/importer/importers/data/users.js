@@ -2,7 +2,7 @@
 
 const debug = require('ghost-ignition').debug('importer:users'),
     _ = require('lodash'),
-    BaseImporter = require('./base');
+    BaseImporter = require('data/importer/importers/data/base');
 
 class UsersImporter extends BaseImporter {
     constructor(allDataFromFile) {

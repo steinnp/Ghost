@@ -5,7 +5,7 @@
 var _ = require('lodash'),
     Promise = require('bluebird'),
     ObjectId = require('bson-objectid'),
-    common = require('../../lib/common'),
+    common = require('lib/common'),
     attach, detach;
 
 /**

@@ -10,7 +10,7 @@
 // The 3rd argument is the string that will be output if the variable's value is 1
 // The 4th argument is the string that will be output if the variable's value is 2+
 
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     _ = require('lodash'),
     errors = proxy.errors,
     i18n = proxy.i18n,

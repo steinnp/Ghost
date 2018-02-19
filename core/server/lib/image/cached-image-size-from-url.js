@@ -1,6 +1,6 @@
 var debug = require('ghost-ignition').debug('utils:image-size-cache'),
-    imageSize = require('./image-size'),
-    common = require('../common'),
+    imageSize = require('lib/image/image-size'),
+    common = require('lib/common'),
     cache = {};
 
 /**

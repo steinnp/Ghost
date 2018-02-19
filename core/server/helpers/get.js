@@ -1,7 +1,7 @@
 // # Get Helper
 // Usage: `{{#get "posts" limit="5"}}`, `{{#get "tags" limit="all"}}`
 // Fetches data from the API
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     _ = require('lodash'),
     Promise = require('bluebird'),
     jsonpath = require('jsonpath'),

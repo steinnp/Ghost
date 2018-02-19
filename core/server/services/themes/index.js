@@ -1,10 +1,10 @@
 var debug = require('ghost-ignition').debug('themes'),
-    common = require('../../lib/common'),
-    themeLoader = require('./loader'),
-    active = require('./active'),
-    validate = require('./validate'),
-    Storage = require('./Storage'),
-    settingsCache = require('../settings/cache'),
+    common = require('lib/common'),
+    themeLoader = require('services/themes/loader'),
+    active = require('services/themes/active'),
+    validate = require('services/themes/validate'),
+    Storage = require('services/themes/Storage'),
+    settingsCache = require('services/settings/cache'),
     themeStorage;
 
 // @TODO: reduce the amount of things we expose to the outside world
@@ -75,9 +75,9 @@ module.exports = {
 
         return themeStorage;
     },
-    list: require('./list'),
+    list: require('services/themes/list'),
     validate: validate,
-    toJSON: require('./to-json'),
+    toJSON: require('services/themes/to-json'),
     getActive: active.get,
     activate: function activate(loadedTheme, checkedTheme, error) {
         // no need to check the score, activation should be used in combination with validate.check
@@ -92,5 +92,5 @@ module.exports = {
             }));
         }
     },
-    middleware: require('./middleware')
+    middleware: require('services/themes/middleware')
 };

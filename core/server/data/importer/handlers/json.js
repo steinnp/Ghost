@@ -1,7 +1,7 @@
 var _ = require('lodash'),
     Promise = require('bluebird'),
     fs = require('fs-extra'),
-    common = require('../../../lib/common'),
+    common = require('lib/common'),
     JSONHandler;
 
 JSONHandler = {

@@ -7,7 +7,7 @@
 // @TODO optimise this to reduce the number of redirects required to get to a pretty URL
 // @TODO move this to being used by routers?
 var slashes = require('connect-slashes'),
-    config = require('../../config');
+    config = require('config');
 
 module.exports = [
     slashes(true, {
@@ -15,5 +15,5 @@ module.exports = [
             'Cache-Control': 'public, max-age=' + config.get('caching:301:maxAge')
         }
     }),
-    require('./uncapitalise')
+    require('web/middleware/uncapitalise')
 ];

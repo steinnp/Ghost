@@ -2,10 +2,10 @@
 
 module.exports = {
     get mobiledocConverter() {
-        return require('./mobiledoc-converter');
+        return require('lib/mobiledoc/converters/mobiledoc-converter');
     },
 
     get markdownConverter() {
-        return require('./markdown-converter');
+        return require('lib/mobiledoc/converters/markdown-converter');
     }
 };

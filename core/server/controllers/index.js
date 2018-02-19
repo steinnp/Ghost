@@ -1,4 +1,4 @@
 module.exports = {
-    preview: require('./preview'),
-    entry: require('./entry')
+    preview: require('controllers/preview'),
+    entry: require('controllers/entry')
 };

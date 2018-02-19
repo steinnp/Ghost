@@ -1,7 +1,7 @@
 var _ = require('lodash'),
     Promise = require('bluebird'),
-    models = require('../../models'),
-    common = require('../../lib/common');
+    models = require('models'),
+    common = require('lib/common');
 
 module.exports = {
     user: function (id) {

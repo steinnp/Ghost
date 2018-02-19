@@ -1,8 +1,8 @@
 'use strict';
 
-const models = require('../../../../models'),
-    common = require('../../../../lib/common'),
-    fixtures = require('../../../schema/fixtures'),
+const models = require('models'),
+    common = require('lib/common'),
+    fixtures = require('data/schema/fixtures'),
     _ = require('lodash'),
     backupClient = fixtures.utils.findModelFixtureEntry('Client', {slug: 'ghost-backup'}),
     Promise = require('bluebird'),

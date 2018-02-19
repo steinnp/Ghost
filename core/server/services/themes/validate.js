@@ -1,6 +1,6 @@
 var Promise = require('bluebird'),
-    config = require('../../config'),
-    common = require('../../lib/common'),
+    config = require('config'),
+    common = require('lib/common'),
     checkTheme;
 
 checkTheme = function checkTheme(theme, isZip) {

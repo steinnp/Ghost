@@ -5,11 +5,11 @@ var path = require('path'),
     bodyParser = require('body-parser'),
 
     // Dirty requires
-    api = require('../../../api'),
-    common = require('../../../lib/common'),
-    validator = require('../../../data/validation').validator,
-    postLookup = require('../../../controllers/frontend/post-lookup'),
-    renderer = require('../../../controllers/frontend/renderer'),
+    api = require('api'),
+    common = require('lib/common'),
+    validator = require('data/validation').validator,
+    postLookup = require('controllers/frontend/post-lookup'),
+    renderer = require('controllers/frontend/renderer'),
 
     templateName = 'subscribe';
 

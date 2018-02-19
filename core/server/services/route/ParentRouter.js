@@ -10,7 +10,7 @@
 var debug = require('ghost-ignition').debug('services:routes:ParentRouter'),
     express = require('express'),
     // This the route registry for the whole site
-    registry = require('./registry');
+    registry = require('services/route/registry');
 /**
  * We expose a very limited amount of express.Router via specialist methods
  */

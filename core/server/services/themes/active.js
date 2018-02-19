@@ -17,9 +17,9 @@
  *
  */
 var join = require('path').join,
-    themeConfig = require('./config'),
-    config = require('../../config'),
-    engine = require('./engine'),
+    themeConfig = require('services/themes/config'),
+    config = require('config'),
+    engine = require('services/themes/engine'),
     // Current instance of ActiveTheme
     currentActiveTheme;
 

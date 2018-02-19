@@ -1,8 +1,8 @@
 'use strict';
 
 const Promise = require('bluebird'),
-    common = require('../../../../lib/common'),
-    commands = require('../../../schema').commands,
+    common = require('lib/common'),
+    commands = require('data/schema').commands,
     table = 'posts',
     columns = ['codeinjection_head', 'codeinjection_foot'],
     _private = {};

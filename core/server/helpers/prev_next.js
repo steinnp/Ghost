@@ -3,7 +3,7 @@
 // `{{#prev_post}}<a href ="{{url}}>previous post</a>{{/prev_post}}'
 // `{{#next_post}}<a href ="{{url absolute="true">next post</a>{{/next_post}}'
 
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     _ = require('lodash'),
     Promise = require('bluebird'),
     moment = require('moment'),

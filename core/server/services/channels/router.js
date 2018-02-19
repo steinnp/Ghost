@@ -1,10 +1,10 @@
 var express = require('express'),
     _ = require('lodash'),
-    config = require('../../config'),
-    common = require('../../lib/common'),
-    urlService = require('../../services/url'),
-    channelController = require('../../controllers/channel'),
-    rssController = require('../../controllers/rss'),
+    config = require('config'),
+    common = require('lib/common'),
+    urlService = require('services/url'),
+    channelController = require('controllers/channel'),
+    rssController = require('controllers/rss'),
     rssRouter,
     channelRouter;
 

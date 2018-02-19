@@ -1,7 +1,7 @@
 var passport = require('passport'),
-    authUtils = require('./utils'),
-    models = require('../../models'),
-    common = require('../../lib/common'),
+    authUtils = require('services/auth/utils'),
+    models = require('models'),
+    common = require('lib/common'),
     authenticate;
 
 authenticate = {

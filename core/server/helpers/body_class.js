@@ -2,7 +2,7 @@
 // Usage: `{{body_class}}`
 //
 // Output classes for the body element
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     _ = require('lodash'),
     SafeString = proxy.SafeString;
 

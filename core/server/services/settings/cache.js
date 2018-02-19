@@ -3,7 +3,7 @@
 // circular dependency bugs.
 var debug = require('ghost-ignition').debug('settings:cache'),
     _ = require('lodash'),
-    common = require('../../lib/common'),
+    common = require('lib/common'),
     /**
      * ## Cache
      * Holds cached settings

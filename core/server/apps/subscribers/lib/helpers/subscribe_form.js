@@ -3,7 +3,7 @@
 var _ = require('lodash'),
 
     // (Less) dirty requires
-    proxy = require('../../../../helpers/proxy'),
+    proxy = require('helpers/proxy'),
     templates = proxy.templates,
     config = proxy.config,
     url = proxy.url,

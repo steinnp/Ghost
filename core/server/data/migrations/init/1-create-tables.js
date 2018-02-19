@@ -1,7 +1,7 @@
 var Promise = require('bluebird'),
-    commands = require('../../schema').commands,
-    schema = require('../../schema').tables,
-    common = require('../../../lib/common'),
+    commands = require('data/schema').commands,
+    schema = require('data/schema').tables,
+    common = require('lib/common'),
     schemaTables = Object.keys(schema);
 
 module.exports.up = function createTables(options) {

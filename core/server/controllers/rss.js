@@ -1,14 +1,14 @@
 var _ = require('lodash'),
     url = require('url'),
-    common = require('../lib/common'),
-    security = require('../lib/security'),
-    settingsCache = require('../services/settings/cache'),
+    common = require('lib/common'),
+    security = require('lib/security'),
+    settingsCache = require('services/settings/cache'),
 
     // Slightly less ugly temporary hack for location of things
-    fetchData = require('./frontend/fetch-data'),
-    handleError = require('./frontend/error'),
+    fetchData = require('controllers/frontend/fetch-data'),
+    handleError = require('controllers/frontend/error'),
 
-    rssService = require('../services/rss'),
+    rssService = require('services/rss'),
     generate;
 
 // @TODO: is this the right logic? Where should this live?!

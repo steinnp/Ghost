@@ -1,6 +1,6 @@
 var _       = require('lodash'),
     Promise = require('bluebird'),
-    storage = require('../../../adapters/storage'),
+    storage = require('adapters/storage'),
     replaceImage,
     ImageImporter,
     preProcessPosts,

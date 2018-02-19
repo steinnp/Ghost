@@ -3,9 +3,9 @@ var path = require('path'),
     ampRouter = express.Router(),
 
     // Dirty requires
-    common = require('../../../lib/common'),
-    postLookup = require('../../../controllers/frontend/post-lookup'),
-    renderer = require('../../../controllers/frontend/renderer'),
+    common = require('lib/common'),
+    postLookup = require('controllers/frontend/post-lookup'),
+    renderer = require('controllers/frontend/renderer'),
 
     templateName = 'amp';
 

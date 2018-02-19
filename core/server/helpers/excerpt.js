@@ -5,7 +5,7 @@
 //
 // Defaults to words="50"
 
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     _ = require('lodash'),
     SafeString = proxy.SafeString,
     getMetaDataExcerpt = proxy.metaData.getMetaDataExcerpt;

@@ -10,28 +10,28 @@
  * - core index requires server
  * - overrides is the first package to load
  */
-require('./overrides');
+require('overrides');
 
 // Module dependencies
 var debug = require('ghost-ignition').debug('boot:init'),
-    config = require('./config'),
+    config = require('config'),
     Promise = require('bluebird'),
-    common = require('./lib/common'),
-    models = require('./models'),
-    permissions = require('./services/permissions'),
-    auth = require('./services/auth'),
-    dbHealth = require('./data/db/health'),
-    GhostServer = require('./ghost-server'),
-    scheduling = require('./adapters/scheduling'),
-    settings = require('./services/settings'),
-    themes = require('./services/themes'),
-    urlService = require('./services/url'),
+    common = require('lib/common'),
+    models = require('models'),
+    permissions = require('services/permissions'),
+    auth = require('services/auth'),
+    dbHealth = require('data/db/health'),
+    GhostServer = require('ghost-server'),
+    scheduling = require('adapters/scheduling'),
+    settings = require('services/settings'),
+    themes = require('services/themes'),
+    urlService = require('services/url'),
 
     // Services that need initialisation
-    apps = require('./services/apps'),
-    xmlrpc = require('./services/xmlrpc'),
-    slack = require('./services/slack'),
-    webhooks = require('./services/webhooks');
+    apps = require('services/apps'),
+    xmlrpc = require('services/xmlrpc'),
+    slack = require('services/slack'),
+    webhooks = require('services/webhooks');
 
 // ## Initialise Ghost
 function init() {
@@ -78,11 +78,11 @@ function init() {
         debug('Apps, XMLRPC, Slack done');
 
         // Setup our collection of express apps
-        parentApp = require('./web/parent-app')();
+        parentApp = require('web/parent-app')();
 
         // Initialise analytics events
         if (config.get('segment:key')) {
-            require('./analytics-events').init();
+            require('analytics-events').init();
         }
 
         debug('Express Apps done');

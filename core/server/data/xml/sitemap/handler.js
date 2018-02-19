@@ -1,6 +1,6 @@
 var _       = require('lodash'),
-    config  = require('../../../config'),
-    sitemap = require('./index');
+    config  = require('config'),
+    sitemap = require('data/xml/sitemap/index');
 
 // Responsible for handling requests for sitemap files
 module.exports = function handler(siteApp) {

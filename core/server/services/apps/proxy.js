@@ -1,9 +1,9 @@
 var _ = require('lodash'),
-    api = require('../../api'),
-    helpers = require('../../helpers/register'),
-    filters = require('../../filters'),
-    common = require('../../lib/common'),
-    router = require('../route').appRouter,
+    api = require('api'),
+    helpers = require('helpers/register'),
+    filters = require('filters'),
+    common = require('lib/common'),
+    router = require('services/route').appRouter,
     generateProxyFunctions;
 
 generateProxyFunctions = function (name, permissions, isInternal) {

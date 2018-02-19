@@ -1,4 +1,4 @@
-var urlService = require('../../services/url');
+var urlService = require('services/url');
 
 function redirectAdminUrls(req, res, next) {
     var subdir = urlService.utils.getSubdir(),

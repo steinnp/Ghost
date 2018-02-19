@@ -7,7 +7,7 @@
 // Returns the URL for the current object scope i.e. If inside a post scope will return image permalink
 // `absolute` flag outputs absolute URL, else URL is relative.
 
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     url = proxy.url;
 
 module.exports = function imgUrl(attr, options) {

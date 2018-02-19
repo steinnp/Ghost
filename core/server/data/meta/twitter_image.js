@@ -1,5 +1,5 @@
-var urlService = require('../../services/url'),
-    getContextObject = require('./context_object.js'),
+var urlService = require('services/url'),
+    getContextObject = require('data/meta/context_object.js'),
     _ = require('lodash');
 
 function getTwitterImage(data) {

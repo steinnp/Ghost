@@ -1,5 +1,5 @@
 var express = require('express'),
-    urlService = require('../../services/url'),
+    urlService = require('services/url'),
     adminRedirect;
 
 adminRedirect = function adminRedirect(path) {

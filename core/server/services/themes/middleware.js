@@ -1,10 +1,10 @@
 var _ = require('lodash'),
-    hbs = require('./engine'),
-    urlService = require('../url'),
-    config = require('../../config'),
-    common = require('../../lib/common'),
-    settingsCache = require('../settings/cache'),
-    activeTheme = require('./active'),
+    hbs = require('services/themes/engine'),
+    urlService = require('services/url'),
+    config = require('config'),
+    common = require('lib/common'),
+    settingsCache = require('services/settings/cache'),
+    activeTheme = require('services/themes/active'),
     themeMiddleware = {};
 
 // ### Ensure Active Theme

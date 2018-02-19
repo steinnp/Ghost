@@ -10,7 +10,7 @@
 // because often other helpers need that (t) returns a string to be able to work as subexpression; e.g.:
 // {{tags prefix=(t " on ")}}
 
-var proxy = require('./proxy'),
+var proxy = require('helpers/proxy'),
     i18n = proxy.i18n;
 
 module.exports = function t(text, options) {

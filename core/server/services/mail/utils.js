@@ -2,7 +2,7 @@ var _ = require('lodash').runInContext(),
     fs = require('fs-extra'),
     path = require('path'),
     htmlToText = require('html-to-text'),
-    urlService = require('../url'),
+    urlService = require('services/url'),
     templatesDir = path.resolve(__dirname, '..', 'mail', 'templates');
 
 _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;

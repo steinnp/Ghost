@@ -18,9 +18,9 @@
   "license": "MIT",
   "main": "./core/index",
   "scripts": {
-    "start": "node index",
-    "dev": "DEBUG=ghost:* grunt dev",
-    "test": "grunt validate --verbose",
+    "start": "NODE_PATH=./core/server node index",
+    "dev": "NODE_PATH=./core/server DEBUG=ghost:* grunt dev",
+    "test": "NODE_PATH=./core/server grunt validate --verbose",
     "setup": "yarn install && knex-migrator init && grunt symlink && grunt init || true"
   },
   "engines": {

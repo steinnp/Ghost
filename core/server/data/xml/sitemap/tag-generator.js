@@ -1,7 +1,7 @@
 var _      = require('lodash'),
-    api    = require('../../../api'),
-    urlService = require('../../../services/url'),
-    BaseMapGenerator = require('./base-generator');
+    api    = require('api'),
+    urlService = require('services/url'),
+    BaseMapGenerator = require('data/xml/sitemap/base-generator');
 
 // A class responsible for generating a sitemap from posts and keeping it updated
 function TagsMapGenerator(opts) {

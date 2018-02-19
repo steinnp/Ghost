@@ -1,4 +1,4 @@
-exports.before = require('./before');
-exports.beforeEach = require('./beforeEach');
-exports.afterEach = require('./afterEach');
-exports.shutdown = require('./shutdown');
+exports.before = require('data/migrations/hooks/migrate/before');
+exports.beforeEach = require('data/migrations/hooks/migrate/beforeEach');
+exports.afterEach = require('data/migrations/hooks/migrate/afterEach');
+exports.shutdown = require('data/migrations/hooks/migrate/shutdown');

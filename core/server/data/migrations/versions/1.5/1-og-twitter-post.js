@@ -1,8 +1,8 @@
 'use strict';
 
 const Promise = require('bluebird'),
-    common = require('../../../../lib/common'),
-    commands = require('../../../schema').commands,
+    common = require('lib/common'),
+    commands = require('data/schema').commands,
     table = 'posts',
     columns = ['og_image', 'og_title', 'og_description', 'twitter_image', 'twitter_title', 'twitter_description'],
     _private = {};

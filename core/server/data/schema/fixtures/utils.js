@@ -2,13 +2,13 @@
 // Standalone file which can be required to help with advanced operations on the fixtures.json file
 var _ = require('lodash'),
     Promise = require('bluebird'),
-    common = require('../../../lib/common'),
-    models = require('../../../models'),
-    baseUtils = require('../../../models/base/utils'),
-    sequence = require('../../../lib/promise/sequence'),
+    common = require('lib/common'),
+    models = require('models'),
+    baseUtils = require('models/base/utils'),
+    sequence = require('lib/promise/sequence'),
     moment = require('moment'),
 
-    fixtures = require('./fixtures'),
+    fixtures = require('data/schema/fixtures/fixtures'),
 
     // Private
     matchFunc,

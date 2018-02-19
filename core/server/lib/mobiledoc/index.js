@@ -6,14 +6,14 @@ module.exports = {
     },
 
     get cards() {
-        return require('./cards');
+        return require('lib/mobiledoc/cards');
     },
 
     get atoms() {
-        return require('./atoms');
+        return require('lib/mobiledoc/atoms');
     },
 
     get converters() {
-        return require('./converters');
+        return require('lib/mobiledoc/converters');
     }
 };

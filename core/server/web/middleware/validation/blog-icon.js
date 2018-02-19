@@ -1,6 +1,6 @@
-var config = require('../../../config'),
-    common = require('../../../lib/common'),
-    imageLib = require('../../../lib/image'),
+var config = require('config'),
+    common = require('lib/common'),
+    imageLib = require('lib/image'),
     validIconFileSize;
 
 validIconFileSize = function validIconFileSize(size) {

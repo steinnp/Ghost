@@ -1,4 +1,4 @@
-var urlService = require('../../services/url');
+var urlService = require('services/url');
 
 function getRssUrl(data, absolute) {
     return urlService.utils.urlFor('rss', {secure: data.secure}, absolute);

@@ -1,6 +1,6 @@
 module.exports = {
-    filter: require('./filter'),
-    includeCount: require('./include-count'),
-    pagination: require('./pagination'),
-    collision: require('./collision')
+    filter: require('models/plugins/filter'),
+    includeCount: require('models/plugins/include-count'),
+    pagination: require('models/plugins/pagination'),
+    collision: require('models/plugins/collision')
 };

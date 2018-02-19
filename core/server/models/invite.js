@@ -1,8 +1,8 @@
 'use strict';
 
 const crypto = require('crypto'),
-    constants = require('../lib/constants'),
-    ghostBookshelf = require('./base');
+    constants = require('lib/constants'),
+    ghostBookshelf = require('models/base');
 
 let Invite,
     Invites;

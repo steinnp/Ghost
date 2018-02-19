@@ -1,6 +1,6 @@
-var ParentRouter = require('../route').ParentRouter,
-    loader = require('./loader'),
-    channelRouter = require('./router');
+var ParentRouter = require('services/route').ParentRouter,
+    loader = require('services/channels/loader'),
+    channelRouter = require('services/channels/router');
 
 /**
  * Channels Router

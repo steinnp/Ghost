@@ -1,8 +1,8 @@
 'use strict';
 
-const common = require('../../../lib/common'),
-    config = require('../../../config'),
-    localUtils = require('../../utils');
+const common = require('lib/common'),
+    config = require('config'),
+    localUtils = require('web/utils');
 
 module.exports = function upload(options) {
     var type = options.type;

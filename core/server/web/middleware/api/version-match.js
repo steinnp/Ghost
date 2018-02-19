@@ -1,5 +1,5 @@
 var semver = require('semver'),
-    common = require('../../../lib/common');
+    common = require('lib/common');
 
 function checkVersionMatch(req, res, next) {
     var clientVersion = req.get('X-Ghost-Version'),
